@@ -1,0 +1,1684 @@
+iMPACT Version: 14.6
+
+iMPACT log file Started on Mon Sep 18 22:33:52 2017
+
+Welcome to iMPACT
+iMPACT Version: 14.6
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 18.09.2017 22:33:58
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'1': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'2': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'3': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'4': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'5': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'6': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'7': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'8': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'9': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'10': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'11': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'12': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'13': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'14': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'15': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'16': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'17': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'18': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'19': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'20': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'21': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'22': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'23': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'24': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'25': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'26': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'27': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'28': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+'29': : Manufacturer's ID = Unknown 
+INFO:iMPACT:501 - '1': Added Device UNKNOWN successfully.
+----------------------------------------------------------------------
+ERROR:iMPACT - A problem may exist in the hardware configuration. that the   cable, scan chain, and power connections are intact, that the specified scan   chain configuration matches the actual hardware, and that the power supply is   adequate and delivering the correct voltage.
+----------------------------------------------------------------------
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+Enumerating cables. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+// *** BATCH CMD : setCable -port lpt3
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 18.09.2017 22:34:12
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc95288xl, Version : 5
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/14.6/ISE_DS/ISE/xc9500xl/data/xc95288xl.bsd...
+INFO:iMPACT:501 - '1': Added Device xc95288xl successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"C:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed"
+'1': Loading file'C:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed'...
+done.
+INFO:iMPACT:501 - '1': Added Device xc95288xl successfully.
+----------------------------------------------------------------------
+INFO:iMPACT - Current time: 18.09.2017 22:34:28
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 18.09.2017 22:41:36
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Enumerating cables. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+// *** BATCH CMD : setCable -port lpt3
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+INFO:iMPACT - Current time: 18.09.2017 22:41:48
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 18.09.2017 22:56:50
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 18.09.2017 22:57:00
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 18.09.2017 22:57:01
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Enumerating cables. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+// *** BATCH CMD : setCable -port lpt3
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+INFO:iMPACT - Current time: 18.09.2017 22:57:12
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00001111111111111111111111111111
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 18.09.2017 22:57:21
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 18.09.2017 22:57:31
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Enumerating cables. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+// *** BATCH CMD : setCable -port lpt3
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+INFO:iMPACT - Current time: 18.09.2017 22:57:40
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 18.09.2017 23:02:10
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 18.09.2017 23:05:48
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 18.09.2017 23:33:24
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Enumerating cables. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+// *** BATCH CMD : setCable -port lpt3
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+INFO:iMPACT - Current time: 18.09.2017 23:33:32
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 19.09.2017 07:41:01
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000000000000000000000000000000
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Enumerating cables. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+// *** BATCH CMD : setCable -port lpt3
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+INFO:iMPACT - Current time: 19.09.2017 07:41:17
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 19.09.2017 22:03:23
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 22:45:48
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 22:50:02
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+'1': Programming terminated due to errors.
+Operation aborted.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 19.09.2017 22:57:56
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:03:00
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:03:13
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:04:48
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:08:44
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:39:24
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:41:30
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:45:12
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 19.09.2017 23:51:59
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+// *** BATCH CMD : copyDevice -p 1
+INFO:iMPACT - Current time: 19.09.2017 23:58:14
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:13:05
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:21:01
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00001111111111111111111111111111
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00001001011000010110000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:21:09
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:23:26
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:26:18
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:28:22
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:29:25
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:31:35
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:33:12
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:34:45
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:36:12
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:38:05
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:40:13
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:42:39
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:45:24
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:47:58
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:48:49
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:50:14
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 00:50:21
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+INFO:iMPACT - Current time: 20.09.2017 08:43:58
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 20.09.2017 21:38:24
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 21:40:41
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 21:40:54
+// *** BATCH CMD : Verify -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...PROGRESS_START - Starting Operation.
+done.
+'1': Verification completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 20.09.2017 21:51:57
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 20.09.2017 21:54:22
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 20.09.2017 21:54:59
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 21:58:09
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 22:00:06
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 20.09.2017 22:05:02
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 20.09.2017 22:08:00
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 20.09.2017 22:09:30
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.

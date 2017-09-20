@@ -45,6 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+#eagle files
 *.b#1
 *.b#2
 *.b#3
@@ -63,3 +64,38 @@ Temporary Items
 *.s#7
 *.s#8
 *.s#9
+#ise tmp files
+*.bld
+*.vho
+*.ref
+_ngo/
+TK68EC020_html/
+xlnx_auto_0_xdb/
+*.nga
+*.cmd_log
+*.gyd
+*.lso
+*.mfd
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.pnx
+*.prj
+*.rpt
+*.html
+*.csv
+*.xml
+*.xrpt
+*.err
+*.syr
+*.tim
+*.tspec
+*.vm6
+*.xst
+*.stx
+*.wdb
+*.log
+*.log
+*.log
+*.log

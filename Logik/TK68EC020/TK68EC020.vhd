@@ -53,7 +53,7 @@ entity TK68EC020 is
            E : out  STD_LOGIC;
            VPA : in  STD_LOGIC;
            VMA : out  STD_LOGIC;
-           RESET : in  STD_LOGIC;
+           RESET : inout  STD_LOGIC;
            RW_020 : inout  STD_LOGIC;
            AMIGA_BUS_DATA_DIR : out  STD_LOGIC;
            AMIGA_BUS_ENABLE_LOW : out  STD_LOGIC;
@@ -213,6 +213,8 @@ signal	CLK_020_D0: STD_LOGIC;
 signal	CLK_GEN: STD_LOGIC_VECTOR ( 1 downto 0 );
 signal	RESET_DLY: STD_LOGIC_VECTOR ( 3 downto 0 );
 signal	RESET_INT: STD_LOGIC;
+signal	RESET_D0: STD_LOGIC;
+signal	RESET_D1: STD_LOGIC;
 signal	CLK_020_PE: STD_LOGIC_VECTOR ( 1 downto 0 );
 signal	AMIGA_DS: STD_LOGIC;
 signal	DTACK_DMA: STD_LOGIC;
@@ -268,7 +270,11 @@ begin
 			--delayed Clocks and signals for edge detection
 			CLK_000_D(0) 	<= CLK_000;
 			CLK_000_D(DS_SAMPLE downto 1) 	<= CLK_000_D((DS_SAMPLE-1) downto 0);
-
+			
+			--edge detection
+			RESET_D0 <= RESET;
+			RESET_D1 <= RESET_D0;
+			
 			-- e-clock is changed on the FALLING edge!
 
 			if(CLK_000_NE = '1' ) then
@@ -285,13 +291,13 @@ begin
 					when E10 => cpu_est <= E1 ;
 				end case;
 			end if;
-			if(RESET = '0' ) then
+			if(RESET_D0 = '0' and RESET_D1 ='1') then
 				RESET_DLY <= x"0";
 			elsif(CLK_GEN="11")then
 				RESET_DLY <= RESET_DLY+1;
 			end if;
 
-			if(RESET = '0' ) then
+			if(RESET_D0 = '0' and RESET_D1 ='1') then
 				RESET_INT <= '0';
 			elsif(RESET_DLY = x"F")then
 				RESET_INT <= '1';
@@ -417,8 +423,8 @@ begin
 				AS_020_000_SYNC <= '1';
 				DSACK_16BIT		<= '0';
 				DSACK_32BIT 	<= '0';
-				AS_000_INT  	<= '1';
-				DS_000_ENABLE	<= '0';
+				--AS_000_INT  	<= '1';
+				--DS_000_ENABLE	<= '0';
 				--RW_000_INT		<= '1';	
 			elsif(	--CLK_020  		= '1'  AND --68020 has a valid AS on high clocks					
 					AS_020_D1			= '0'  AND --as set
@@ -500,7 +506,7 @@ begin
 					
 					--go to s7   dsack is sampled at the falling edge of the 020-clock
 					--if(CLK_000_D(0)='0' and CLK_000_D(1)='1')then
-					if(RW_020='1' and CLK_000_D(1)='1')then
+					if(CLK_000_D(4)='1')then
 							DSACK_16BIT <='1'; 
 					end if;
 
@@ -509,6 +515,8 @@ begin
 						DSACK_16BIT <='1'; 
 					end if;
 				when END_CYCLE_N =>--68000:S7: Latch/Store data. Wait here for new cycle and go to IDLE on high clock
+					AS_000_INT <= '1';
+					DS_000_ENABLE	<= '0';
 					if(CLK_000_PE='1')then --go to s0	
 						SM_AMIGA<=IDLE_P;	
 						RW_000_INT		<= '1';	
@@ -636,10 +644,12 @@ begin
 
 			--memory control
 			
+			LE_020_RAM <='0'; -- Write: Immer transparent!
+			
 			--latch control for reads
 			if(CQ=start_ras)then --cl2
 				LE_RAM_020<= '0';--not RW;
-			elsif(CQ=precharge or CQ =start_state)then
+			elsif(CQ=data_wait or CQ =start_state)then
 				LE_RAM_020<= '1';
 			end if;
 			--output buffer control
@@ -819,7 +829,7 @@ begin
 					 CQ <= refresh_start;
 					 --RAS <= '1';
 				 elsif (	MEM_SPACE = '1' and AS_020 = '0'								
-							and CLK_GEN=MEM_START
+							--and CLK_GEN=MEM_START
 							) then
 					--RAS <= '0';
 					--CQ <= commit_ras;
@@ -1195,6 +1205,7 @@ begin
 	BERR		<=	'0' when AS_020 ='0' and FC="11" and A(19 downto 16)="0010" AND BGACK_000='1'
 					else 'Z';
 	
+	RESET <= '0' when RESET_INT ='0' else 'Z';
 	
 end Behavioral;
 

@@ -2506,3 +2506,315 @@ done.
 PROGRESS_END - End Operation.
 Elapsed time =      7 sec.
 Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+INFO:iMPACT - Current time: 21.09.2017 20:31:49
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 20:37:22
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 20:43:28
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable isconnected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found NewHardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = 0278h.
+ ECP base address = 0678h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ LPT base address = D800h.
+ ECP base address = D400h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:12:05
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:14:35
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:16:51
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:29:54
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:38:59
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:46:11
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:49:39
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 21:51:49
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 21.09.2017 22:04:41
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 21.09.2017 22:08:20
+Updating config fileC:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.

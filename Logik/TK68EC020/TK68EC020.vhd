@@ -639,7 +639,7 @@ begin
 			--latch control for reads
 			if(CQ=start_ras)then --cl2
 				LE_RAM_020<= '0';--not RW;
-			elsif(CQ=data_wait or CQ =start_state)then
+			elsif(CQ=precharge or CQ =start_state)then
 				LE_RAM_020<= '1';
 			end if;
 			--output buffer control
@@ -1065,19 +1065,20 @@ begin
 				IDE_BUF_DIR <= not RW_020;
 				if(RW_020 = '0')then
 					--the write goes to the hdd!
+					IDE_ENABLE  <= '1';
 					IDE_W_S		<= '0';
 					IDE_R_S		<= '1';
 					ROM_OE_S		<=	'1';					
-					if(IDE_WAIT = '1')then --IDE I/O
-						DSACK_16BIT		<=	IDE_DSACK_D(IDE_WAITS);
+					if(IDE_WAIT = '1' and IDE_DSACK_D(IDE_WAITS) ='1' )then --IDE I/O
+						DSACK_16BIT		<=	'1';
 					end if;
 				elsif(RW_020 = '1' and IDE_ENABLE = '1')then
 					--read from IDE instead from ROM
 					IDE_W_S		<= '1';
 					IDE_R_S		<= '0';
 					ROM_OE_S		<=	'1';
-					if(IDE_WAIT = '1')then --IDE I/O
-						DSACK_16BIT		<=	IDE_DSACK_D(IDE_WAITS);
+					if(IDE_WAIT = '1' and IDE_DSACK_D(IDE_WAITS) ='1')then --IDE I/O
+						DSACK_16BIT		<=	'1';
 					end if;
 				elsif(RW_020 = '1' and IDE_ENABLE = '0')then
 					DSACK_16BIT		<= IDE_DSACK_D(ROM_WAITS);
@@ -1085,9 +1086,12 @@ begin
 					IDE_W_S		<= '1';
 					IDE_R_S		<= '1';
 					ROM_OE_S		<=	'0';	
+				end if;				
+				if(CLK_GEN="11")then
+					IDE_DSACK_D(0)		<=	'1';
+					IDE_DSACK_D(IDE_DELAY downto 1) <= IDE_DSACK_D((IDE_DELAY-1) downto 0);				
 				end if;
-				IDE_DSACK_D(0)		<=	'1';
-				IDE_DSACK_D(IDE_DELAY downto 1) <= IDE_DSACK_D((IDE_DELAY-1) downto 0);				
+				
 			else
 				IDE_BUF_DIR <= '1';
 				IDE_R_S		<= '1';

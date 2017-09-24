@@ -129,7 +129,7 @@ constant MEM_START : STD_LOGIC_VECTOR(1 downto 0) :="10";
 	--should be 60ns minus one cycle, because the refresh command counts too 150mhz= 6,66ns *9 =60ns
 	--puls one cycle for safety :(
 
-constant RQ_TIMEOUT : integer := 128;
+constant RQ_TIMEOUT : integer := 255;
 	--8192 refreshes in 64ms ->8192 refreshes in 3200000 50MHz ticks
 	-- -> Refresh after 390 tics -> 255 is a safe place to be!
 
@@ -249,6 +249,7 @@ signal 	INIT_COMPLETE  :  STD_LOGIC;
 signal	MEM_DELAY : STD_LOGIC;
 signal	RAM_CYCLE_START : STD_LOGIC;
 signal	LE_RAM_020_P : STD_LOGIC;
+signal 	MEM_SPACE_ENABLE :  STD_LOGIC_VECTOR (6 downto 0);
 begin
 
 	CLK_000_PE <= CLK_000_D(0) AND NOT CLK_000_D(1);
@@ -389,6 +390,7 @@ begin
 			MEM_DELAY <='0';
 			RAM_CYCLE_START <='0';
 			ENACLK_PRE <= '1';
+			MEM_SPACE_ENABLE <="0000000";
 		elsif(rising_edge(CLK_PLL)) then
 
 			--the statemachine
@@ -411,9 +413,17 @@ begin
 				BGACK_020_INT 	<= '1'; --hold this signal high until 7m clock goes low
 			end if;
 			BGACK_020_INT_D <= BGACK_020_INT;
-
-			
-
+			if(CQ=init_precharge)then
+				if(MEM_CFG2='0' and MEM_CFG1 = '1')then --enable only autoconfig mem!
+					MEM_SPACE_ENABLE(6 downto 2) <="00000";
+				elsif(MEM_CFG2='0' and MEM_CFG1 = '0')then --enable only lower 4MB of autoconfig mem!
+					MEM_SPACE_ENABLE(6 downto 1) <="000000";
+				elsif(MEM_CFG2='1' and MEM_CFG1 = '0')then --disable completely!
+					MEM_SPACE_ENABLE(6 downto 0) <="0000000";
+				else
+					MEM_SPACE_ENABLE(6 downto 2) <="00011";
+				end if;
+			end if;
 			--bus grant only in idle state
 			if(BG_020= '1')then
 				BG_000	<= '1';
@@ -624,7 +634,12 @@ begin
 			TK_CYCLE <='1';--default value
 			
 			--MEM address decode section 
-			if(A(23 downto 20) = (MEM_BASE) AND SHUT_UP(0) ='0') then
+			if(
+					(A(23 downto 20) = (MEM_BASE) and SHUT_UP(0) ='0')
+				or (A(23 downto 20) = x"C" 		and MEM_SPACE_ENABLE(2)='1')
+				or (A(23 downto 19) = (x"D"&'0') and MEM_SPACE_ENABLE(2)='1')
+				or (A(23 downto 20) = (x"A") 		and MEM_SPACE_ENABLE(3)='1')
+				) then
 				MEM_SPACE <= '1';
 				TK_CYCLE <='0';
 			else
@@ -746,7 +761,7 @@ begin
 			if CQ = init_refresh or 
 				CQ = refresh_start then
 				RQ<=	x"00";
-			elsif(CLK_GEN ="00" and RQ <RQ_TIMEOUT) then --count on edges
+			elsif(CLK_GEN(0) ='1' and REFRESH ='0') then --count on edges
 				RQ <= RQ + 1;
 			end if;
 			

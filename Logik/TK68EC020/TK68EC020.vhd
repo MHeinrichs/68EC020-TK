@@ -210,11 +210,11 @@ signal	CLK_000_PE: STD_LOGIC;
 signal	CLK_000_NE: STD_LOGIC;
 signal	DTACK_D0: STD_LOGIC;
 signal	CLK_020_D0: STD_LOGIC;
-signal	CLK_GEN: STD_LOGIC_VECTOR ( 1 downto 0 );
-signal	RESET_DLY: STD_LOGIC_VECTOR ( 3 downto 0 );
-signal	RESET_INT: STD_LOGIC;
-signal	RESET_D0: STD_LOGIC;
-signal	RESET_D1: STD_LOGIC;
+signal	CLK_GEN: STD_LOGIC_VECTOR ( 1 downto 0 ):="00";
+signal	RESET_DLY: STD_LOGIC_VECTOR ( 3 downto 0 ):=x"0";
+signal	RESET_INT: STD_LOGIC :='0';
+signal	RESET_D0: STD_LOGIC :='0';
+signal	RESET_D1: STD_LOGIC :='0';
 signal	CLK_020_PE: STD_LOGIC_VECTOR ( 1 downto 0 );
 signal	AMIGA_DS: STD_LOGIC;
 signal	DTACK_DMA: STD_LOGIC;
@@ -245,8 +245,10 @@ constant ARAM_PRECHARGE: STD_LOGIC_VECTOR (12 downto 0) := "0010000000000";
 --constant ARAM_OPTCODE: STD_LOGIC_VECTOR (12 downto 0) := "0001000110000"; --cl3   
 constant ARAM_OPTCODE: STD_LOGIC_VECTOR (12 downto 0) := "0001000100000"; --cl2																			  
 signal 	ENACLK_PRE : STD_LOGIC;
-signal 	RAM_BANK_ACTIVATE  :  STD_LOGIC;
+signal 	INIT_COMPLETE  :  STD_LOGIC;
 signal	MEM_DELAY : STD_LOGIC;
+signal	RAM_CYCLE_START : STD_LOGIC;
+signal	LE_RAM_020_P : STD_LOGIC;
 begin
 
 	CLK_000_PE <= CLK_000_D(0) AND NOT CLK_000_D(1);
@@ -306,6 +308,15 @@ begin
 		end if;
 	end process gen_clk;
 
+	neg_clk:process(CLK_PLL,RESET_INT)
+	begin
+		if(RESET_INT = '0' ) then
+			LE_RAM_020<='1';
+		elsif(falling_edge(clk_pll))then
+			LE_RAM_020 <= LE_RAM_020_P;
+		end if;
+	end process;
+
 	pos_clk: process(CLK_PLL,RESET_INT)
 	begin
 		if(RESET_INT = '0' ) then
@@ -358,7 +369,7 @@ begin
 			IDE_BASEADR <= x"FF";
 			MEM_BASE <= x"F";
 			LE_020_RAM <= '1';
-			LE_RAM_020 <= '1';
+			LE_RAM_020_P <= '1';
 			OE_020_RAM <= '1';
 			OE_RAM_020 <= '1';
 			LDQ0	<= '1';
@@ -371,11 +382,13 @@ begin
 			MEM_WE <= '1';
 			ARAM <= (others => '0');	
 			CQ	<= powerup;
-			RAM_BANK_ACTIVATE <='0';
+			INIT_COMPLETE <='0';
 			NQ  <= x"0";
 			RQ<=	x"00";
 			REFRESH <= '0';
 			MEM_DELAY <='0';
+			RAM_CYCLE_START <='0';
+			ENACLK_PRE <= '1';
 		elsif(rising_edge(CLK_PLL)) then
 
 			--the statemachine
@@ -610,12 +623,19 @@ begin
 	
 			TK_CYCLE <='1';--default value
 			
-			--IDE address decode section 
+			--MEM address decode section 
 			if(A(23 downto 20) = (MEM_BASE) AND SHUT_UP(0) ='0') then
 				MEM_SPACE <= '1';
 				TK_CYCLE <='0';
 			else
 				MEM_SPACE <= '0';
+			end if;
+
+			--RAM_CYCLE_START is neccessary to avoid double start 
+			if(CQ=start_ras) then
+				RAM_CYCLE_START <='1';
+			elsif(AS_020 ='1') then
+				RAM_CYCLE_START <='0';
 			end if;
 
 
@@ -635,8 +655,8 @@ begin
 				AUTO_CONFIG <= '0';
 			end if;
 
-			if( (MEM_SPACE = '1' and AS_020 = '0' and CLK_GEN=MEM_START)
-				and (REFRESH = '1' or CQ= refresh_start or CQ = refresh_wait)) then
+			if( MEM_SPACE = '1' and AS_020 = '0'
+				and (REFRESH = '1' or CQ /= start_state)) then
 				MEM_DELAY <='1';
 			elsif(AS_020 = '1')then
 				MEM_DELAY <='0';
@@ -648,16 +668,16 @@ begin
 			
 			--latch control for reads
 			if(CQ=start_ras)then --cl2
-				LE_RAM_020<= '0';--not RW;
+				LE_RAM_020_P<= '0';--not RW;
 			elsif(CQ=data_wait or CQ =start_state)then
-				LE_RAM_020<= '1';
+				LE_RAM_020_P<= '1';
 			end if;
 			--output buffer control
 			if( CQ=commit_ras
 				) then
 				OE_020_RAM <= RW_020;
 				OE_RAM_020 <= not RW_020;
-			elsif(AS_020 = '1' 
+			elsif(AS_020_D0 = '1' 
 					--and nAS_D0='1'
 					)then -- delay the output a bit
 				OE_020_RAM <= '1';
@@ -675,36 +695,40 @@ begin
 		
 			--now decode the adresslines A[0..1] and SIZE[0..1] to determine the ram bank to write				
 			-- bits 0-7
-			if(RW_020='1' or ( SIZE="00" or 
+			if(INIT_COMPLETE = '1' and (
+					RW_020='1' or ( SIZE="00" or 
 								(A_0='1' and A(1)='1') or 
 								(A(1)='1' and SIZE(1)='1') or
-								(A_0='1' and SIZE="11" )))then
+								(A_0='1' and SIZE="11" ))))then
 				LDQ0	<= '0';
 			else
 				LDQ0	<= '1';
 			end if;
 						
 			-- bits 8-15
-			if(RW_020='1' or (	(A_0='0' and A(1)='1') or
+			if(INIT_COMPLETE = '1' and (
+					RW_020='1' or (	(A_0='0' and A(1)='1') or
 								(A_0='1' and A(1)='0' and SIZE(0)='0') or
 								(A(1)='0' and SIZE="11") or 
-								(A(1)='0' and SIZE="00")))then
+								(A(1)='0' and SIZE="00"))))then
 				UDQ0	<= '0';
 			else
 				UDQ0	<= '1';
 			end if;				
 					
 			--bits 16-23
-			if(RW_020='1' or (	(A_0='1' and A(1)='0') or
+			if(INIT_COMPLETE = '1' and (
+					RW_020='1' or (	(A_0='1' and A(1)='0') or
 								(A(1)='0' and SIZE(0)='0') or 
-								(A(1)='0' and SIZE(1)='1')))then
+								(A(1)='0' and SIZE(1)='1'))))then
 				LDQ1	<= '0';
 			else
 				LDQ1	<= '1';
 			end if;									
 					
 			--bits 24--31
-			if(RW_020='1' or ( 	A_0='0' and A(1)='0' ))then
+			if(INIT_COMPLETE = '1' and (
+				RW_020='1' or ( 	A_0='0' and A(1)='0' )))then
 				UDQ1	<= '0';
 			else
 				UDQ1	<= '1';
@@ -742,11 +766,11 @@ begin
 		
 			--bank activate decoder
 			if(CQ= init_wait)then --now its save to switch on the bank decode
-				RAM_BANK_ACTIVATE <='1';
+				INIT_COMPLETE <='1';
 			end if;
 			
 			--hold BA low until init is completed!
-			if(RAM_BANK_ACTIVATE ='1')then
+			if(INIT_COMPLETE ='1')then
 				BA <= A(23 downto 22);
 			else
 				BA <= "00";
@@ -828,7 +852,7 @@ begin
 				 if (REFRESH = '1') then
 					 CQ <= refresh_start;
 					 --RAS <= '1';
-				 elsif (	MEM_SPACE = '1' and AS_020 = '0'								
+				 elsif (	MEM_SPACE = '1' and AS_020 = '0'	and RAM_CYCLE_START ='0'							
 							--and CLK_GEN=MEM_START
 							) then
 					--RAS <= '0';
@@ -871,8 +895,11 @@ begin
 				 CAS <= '1';
 				 MEM_WE <= '1';
 				 ARAM <= "00000" & A(9 downto 2);
-				 CQ <= start_cas;
-
+				 if(DS_020='0')then --wait for datastrobe for write!
+					CQ <= start_cas;
+				 else
+					CQ <= commit_ras;
+				 end if;
 				when start_cas =>
 				 ENACLK_PRE <= '1'; --cl3
 				 RAS <= '1';

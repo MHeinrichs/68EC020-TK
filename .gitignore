@@ -99,3 +99,5 @@ xlnx_auto_0_xdb/
 *.log
 *.log
 *.log
+isim/
+Logik/TK68EC020/log.txt

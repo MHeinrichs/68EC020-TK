@@ -1,0 +1,67 @@
+________________________________________________________________________________
+
+MODEL:  mt48lc32m16a2.vhd                                        VERSION:    1.0
+DESCRIPTION:  8M x 16 x 4Banks SDRAM                             DATE: 05 JAN 27
+TIMING FILE:  mt48lc32M16a2.ftm                                  VERSION:    1.0
+                                                                 DATE: 05 JAN 27
+
+LOCATION:  http://www.FreeModelFoundry.com/fmf_models/ram/mt48lc32m16a2.vhd
+LOCATION:  http://www.FreeModelFoundry.com/fmf_models/ram/mt48lc32M16a2.ftm
+
+LIBRARY:  RAM
+
+GENERIC PART NUMBERS COVERED:  MT48LC32M16A2, K4S510832B, EDS5116ABTA
+
+________________________________________________________________________________
+
+SUPPORTED PART NUMBERS
+    ____________________________________________________________________________
+
+                     Micron Technology, Inc
+
+    Part Number                       Data Source
+    ____________________________________________________________________________
+
+
+    MT48LC32M16A2P-75                   1
+
+    MT48LC32M16A2TG-75                  1
+
+    MT48LC32M16A2P-7E                   1
+
+    MT48LC32M16A2TG-7E                  1
+
+    ____________________________________________________________________________
+
+                   Elpida Memory, Inc
+
+    Part Number                       Data Source
+    ____________________________________________________________________________
+
+     EDS5116ABTA-75                     2
+
+    ____________________________________________________________________________
+
+                   Samsung Electronics
+
+    Part Number                       Data Source
+    ____________________________________________________________________________
+
+
+    K4S511632B-TC75                    3
+
+    K4S511632B-TL75                    3
+
+________________________________________________________________________________
+
+DATA SOURCES
+
+    These are the primary sources of data used in determining behaviour and
+    timing of the components represented by this model.
+
+    1.   Micron 512mbSDRAMfront.fm - Rev. G 1/04 EN
+
+    2.   ELPIDA Document No. E0250E30 (Ver. 3.0)
+         Date Published  January 2003  (K) Japan  URL:  http://www.elpida.com
+
+    3.   Samsung Electronics 512Mb B-die SDRAM Specification Rev. 1.1 February 2004

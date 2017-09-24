@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="conversions" />
+            <top_module name="ff_package" />
+            <top_module name="gen_utils" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="tk68ec020_tb" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="69" />
+   <wvobject fp_name="/tk68ec020_tb/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[23:0]</obj_property>
+      <obj_property name="ObjectShortName">a[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/size" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">size[1:0]</obj_property>
+      <obj_property name="ObjectShortName">size[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ide_wait" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ide_wait</obj_property>
+      <obj_property name="ObjectShortName">ide_wait</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/bg_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bg_020</obj_property>
+      <obj_property name="ObjectShortName">bg_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/bgack_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bgack_000</obj_property>
+      <obj_property name="ObjectShortName">bgack_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ipl_000" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ipl_000[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ipl_000[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/br_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">br_000</obj_property>
+      <obj_property name="ObjectShortName">br_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/vpa" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vpa</obj_property>
+      <obj_property name="ObjectShortName">vpa</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/mem_cfg1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_cfg1</obj_property>
+      <obj_property name="ObjectShortName">mem_cfg1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/mem_cfg2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_cfg2</obj_property>
+      <obj_property name="ObjectShortName">mem_cfg2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/auto_boot" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">auto_boot</obj_property>
+      <obj_property name="ObjectShortName">auto_boot</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/berr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">berr</obj_property>
+      <obj_property name="ObjectShortName">berr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/fc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fc[1:0]</obj_property>
+      <obj_property name="ObjectShortName">fc[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/rw_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rw_020</obj_property>
+      <obj_property name="ObjectShortName">rw_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/as_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">as_020</obj_property>
+      <obj_property name="ObjectShortName">as_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ds_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ds_020</obj_property>
+      <obj_property name="ObjectShortName">ds_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/le_020_ram" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">le_020_ram</obj_property>
+      <obj_property name="ObjectShortName">le_020_ram</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/oe_020_ram" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">oe_020_ram</obj_property>
+      <obj_property name="ObjectShortName">oe_020_ram</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/le_ram_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">le_ram_020</obj_property>
+      <obj_property name="ObjectShortName">le_ram_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/oe_ram_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">oe_ram_020</obj_property>
+      <obj_property name="ObjectShortName">oe_ram_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ras" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ras</obj_property>
+      <obj_property name="ObjectShortName">ras</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/cas" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cas</obj_property>
+      <obj_property name="ObjectShortName">cas</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/mem_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_we</obj_property>
+      <obj_property name="ObjectShortName">mem_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_ram" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_ram</obj_property>
+      <obj_property name="ObjectShortName">clk_ram</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_020</obj_property>
+      <obj_property name="ObjectShortName">clk_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/dram" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dram[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dram[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/dsack" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dsack[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dsack[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/dtack" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dtack</obj_property>
+      <obj_property name="ObjectShortName">dtack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/udq0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">udq0</obj_property>
+      <obj_property name="ObjectShortName">udq0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ldq0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ldq0</obj_property>
+      <obj_property name="ObjectShortName">ldq0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/udq1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">udq1</obj_property>
+      <obj_property name="ObjectShortName">udq1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ldq1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ldq1</obj_property>
+      <obj_property name="ObjectShortName">ldq1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/as_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">as_000</obj_property>
+      <obj_property name="ObjectShortName">as_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/rw_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rw_000</obj_property>
+      <obj_property name="ObjectShortName">rw_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/uds_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">uds_000</obj_property>
+      <obj_property name="ObjectShortName">uds_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/lds_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lds_000</obj_property>
+      <obj_property name="ObjectShortName">lds_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_000</obj_property>
+      <obj_property name="ObjectShortName">clk_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/pll_c" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pll_c</obj_property>
+      <obj_property name="ObjectShortName">pll_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/avec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">avec</obj_property>
+      <obj_property name="ObjectShortName">avec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/e" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">e</obj_property>
+      <obj_property name="ObjectShortName">e</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/vma" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vma</obj_property>
+      <obj_property name="ObjectShortName">vma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ipl_020" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ipl_020[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ipl_020[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/aram" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aram[12:0]</obj_property>
+      <obj_property name="ObjectShortName">aram[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ba" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ba[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ba[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ide_cs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ide_cs[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ide_cs[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ide_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ide_a[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ide_a[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ide_r" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ide_r</obj_property>
+      <obj_property name="ObjectShortName">ide_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ide_w" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ide_w</obj_property>
+      <obj_property name="ObjectShortName">ide_w</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ide_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ide_reset</obj_property>
+      <obj_property name="ObjectShortName">ide_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/ide_buffer_dir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ide_buffer_dir</obj_property>
+      <obj_property name="ObjectShortName">ide_buffer_dir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/rom_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rom_b[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_b[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/rom_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rom_en</obj_property>
+      <obj_property name="ObjectShortName">rom_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/rom_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rom_oe</obj_property>
+      <obj_property name="ObjectShortName">rom_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/rom_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rom_we</obj_property>
+      <obj_property name="ObjectShortName">rom_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/cdis" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cdis</obj_property>
+      <obj_property name="ObjectShortName">cdis</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/amiga_bus_data_dir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">amiga_bus_data_dir</obj_property>
+      <obj_property name="ObjectShortName">amiga_bus_data_dir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/amiga_bus_enable_low" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">amiga_bus_enable_low</obj_property>
+      <obj_property name="ObjectShortName">amiga_bus_enable_low</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/amiga_bus_enable_high" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">amiga_bus_enable_high</obj_property>
+      <obj_property name="ObjectShortName">amiga_bus_enable_high</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/bg_000" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bg_000</obj_property>
+      <obj_property name="ObjectShortName">bg_000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/br_020" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">br_020</obj_property>
+      <obj_property name="ObjectShortName">br_020</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_pll_ref" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_pll_ref</obj_property>
+      <obj_property name="ObjectShortName">clk_pll_ref</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_7period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_7period</obj_property>
+      <obj_property name="ObjectShortName">clk_7period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tk68ec020_tb/clk_pperiod" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_pperiod</obj_property>
+      <obj_property name="ObjectShortName">clk_pperiod</obj_property>
+   </wvobject>
+</wave_config>

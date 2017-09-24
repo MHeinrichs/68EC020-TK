@@ -584,6 +584,14 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/IDE_DSA
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ENACLK_PRE\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ENACLK_PRE\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_SPACE\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -776,14 +784,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DEL
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RAM_BANK_ACTIVATE\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RAM_BANK_ACTIVATE\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_16BIT\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -797,6 +797,22 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_3
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RAM_CYCLE_START\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RAM_CYCLE_START\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/INIT_COMPLETE\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/INIT_COMPLETE\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -1132,111 +1148,39 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/VMA_INT
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_4\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_4\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_4\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_3\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_3\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_3\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_2\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_2\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_2\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_1\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_1\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_1\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_0\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_0\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_0\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D0\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D0\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D0\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D0\/Q\/X_ONE prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D0\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D0\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/Q\/X_ONE prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_D1\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -1309,6 +1253,66 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_na
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AMIGA_BUS_ENABLE_DMA_LOW\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AMIGA_BUS_ENABLE_DMA_LOW\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_4\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_4\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_4\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_3\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_3\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_3\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_2\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_2\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_2\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_1\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_1\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_1\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_0\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_0\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_000_D_0\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -1492,43 +1496,99 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DS_000_
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_INT\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_INT\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_INT\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_INT\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_3\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_3\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_3\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_3\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_2\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_2\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_2\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_2\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_1\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_1\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_0\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_0\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_0\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_INT\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_DLY_0\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RESET_INT\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/Q\/X_ONE prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_0\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/Q\/X_ONE prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_GEN_1\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "0"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -2108,10 +2168,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CLK_020
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_16BIT_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -2320,15 +2376,15 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AMIGA_D
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DS_020_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AS_020_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AS_000_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DS_020_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -2349,6 +2405,10 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/A0_DMA_
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/OE_RAM_020_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RAM_CYCLE_START_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -2485,22 +2545,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DS_000_
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DS_000_DMA_and00025 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -2768,7 +2812,7 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out73 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out73 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -2776,23 +2820,27 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out75 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out42 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out44 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out45 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out34 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_Out35 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -3129,30 +3177,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/TK_CYCL
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/TK_CYCLE_and000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00004 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00005 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_and00006 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -4088,99 +4112,99 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mu
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -4280,195 +4304,99 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mu
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<6>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<8>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -4568,99 +4496,99 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mu
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<11>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -4760,151 +4688,99 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mu
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR4"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In25 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In26 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In27 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In28 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In29 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In30 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In34 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In35 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In36 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In37 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mux0000<10>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -5000,6 +4876,158 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/ARAM_mu
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In6 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In7 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In8 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In9 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR4"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In10 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In15 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In16 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In17 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In18 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In19 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In20 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In25 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In26 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In27 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In28 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In29 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In30 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In34 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In35 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In36 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In37 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/CQ_FSM_FFd5-In38 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_16BIT_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -5072,42 +5100,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_1
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/Mcompar_IPL_020_cmp_eq0000_AEB1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -5164,42 +5156,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_SPA
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00004 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00005 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00006 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00007 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00008 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00009 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/NQ_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND5"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -5224,11 +5180,11 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_1
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -5244,35 +5200,19 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DEL
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00006 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00006 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00007 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00007 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00008 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00008 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00009 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and000010 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and000013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/MEM_DELAY_and00009 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -5680,111 +5620,55 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/Dout2_1
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ1_mux00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00017 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00018 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00019 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000110 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00017 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00017 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00018 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00019 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000110 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000115 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ1_mux00018 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -5892,6 +5776,130 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LE_RAM_
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00017 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00018 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux00019 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000110 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDQ0_mux000114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00017 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00018 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux00019 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000110 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000115 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000116 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/LDQ0_mux000117 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/VMA_INT_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -5976,26 +5984,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/BG_000_
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AS_020_000_SYNC_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -6029,6 +6017,102 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AS_020_
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AS_020_000_SYNC_not00019 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/RQ_not00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00004 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00005 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00006 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00007 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00008 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_mux00009 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00017 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00018 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not00019 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/DSACK_32BIT_not000110 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -7542,10 +7626,10 @@ WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'CLK_000_IBUF'
 Considering device XC95288XL-10-TQ144.
 Flattening design..
 Multi-level logic optimization...
-Timing optimization...............................
+Timing optimization..............................
 Timing driven global resource optimization
 General global resource optimization........
 Re-checking device resources ...
-Mapping a total of 174 equations into 16 function blocks.................................
+Mapping a total of 176 equations into 16 function blocks.................................................................
 
 Design TK68EC020 has been optimized and fit into device XC95288XL-10-TQ144.

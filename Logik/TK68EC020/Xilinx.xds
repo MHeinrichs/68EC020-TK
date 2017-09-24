@@ -6,7 +6,7 @@
   <DeviceList devices="xc9500xl"/>
 
   <Properties>
-    <property name="Synthesize - XST:FSM Encoding Algorithm" value="Gray"/>
+    <property name="Synthesize - XST:FSM Encoding Algorithm" value="Auto"/>
   </Properties>
 
 </DesignStrategy>

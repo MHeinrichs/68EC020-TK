@@ -411,18 +411,7 @@ begin
 				BGACK_020_INT 	<= '1'; --hold this signal high until 7m clock goes low
 			end if;
 			BGACK_020_INT_D <= BGACK_020_INT;
-			if(CQ=init_precharge)then
-				if(MEM_CFG2='0' and MEM_CFG1 = '1')then --enable only autoconfig mem!
-					MEM_SPACE_ENABLE(6 downto 2) <="00000";
-				elsif(MEM_CFG2='0' and MEM_CFG1 = '0')then --enable only lower 4MB of autoconfig mem!
-					MEM_SPACE_ENABLE(6 downto 1) <="000000";
-				elsif(MEM_CFG2='1' and MEM_CFG1 = '0')then --disable completely!
-					MEM_SPACE_ENABLE(6 downto 0) <="0000000";
-					AUTO_CONFIG_DONE(0) <='1'; --disable autoconfig!
-				else
-					MEM_SPACE_ENABLE(6 downto 2) <="00011";
-				end if;
-			end if;
+
 			--bus grant only in idle state
 			if(BG_020= '1')then
 				BG_000	<= '1';
@@ -631,6 +620,19 @@ begin
 						
 	
 			TK_CYCLE <='1';--default value
+			
+			--mem enable section
+			if(INIT_COMPLETE= '0' )then
+				if(MEM_CFG2='0' )then --enable only autoconfig mem (8 or 4mb)!
+					MEM_SPACE_ENABLE(6 downto 2) <="00000";
+				elsif(MEM_CFG2='1' and MEM_CFG1 = '0')then --disable completely!
+					MEM_SPACE_ENABLE(6 downto 0) <="0000000";
+					AUTO_CONFIG_DONE(0) <='1'; --disable autoconfig!
+				else
+					MEM_SPACE_ENABLE(6 downto 2) <="00011";
+				end if;
+			end if;
+
 			
 			--MEM address decode section 
 			if(
@@ -1008,7 +1010,7 @@ begin
 							end if;
 						end if;
 					when "000001"	=> 
-						if(AUTO_CONFIG_DONE(0)='0' and MEM_CFG1='1' and MEM_CFG2='1' ) then
+						if(AUTO_CONFIG_DONE(0)='0' and MEM_CFG1='1'  ) then
 							--8mb
 							Dout2(2 downto 0) <= "000" ;
 						elsif(AUTO_CONFIG_DONE(0)='0' and MEM_CFG1='0' and MEM_CFG2='0' ) then
@@ -1097,7 +1099,7 @@ begin
 					when "100100"	=> 
 
 						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "00")then 
-							if(MEM_CFG1='1' and MEM_CFG2='1' ) then
+							if(MEM_CFG1='1' ) then
 								--8mb
 								MEM_SPACE_ENABLE(1 downto 0) <= "11";
 							else

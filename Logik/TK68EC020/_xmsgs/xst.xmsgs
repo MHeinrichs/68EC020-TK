@@ -20,16 +20,7 @@
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">MEM_SPACE_ENABLE&lt;4&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">TK68EC020</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">MEM_SPACE_ENABLE&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">TK68EC020</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
-</msg>
-
-<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">MEM_SPACE_ENABLE&lt;0&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">TK68EC020</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
-</msg>
-
 <msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">MEM_SPACE_ENABLE&lt;6:4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">MEM_SPACE_ENABLE&lt;1:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">CLK_020_H</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.

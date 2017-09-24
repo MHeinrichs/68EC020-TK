@@ -227,7 +227,6 @@ signal	AUTO_CONFIG_PAUSE:STD_LOGIC;
 signal	AUTO_CONFIG_DONE_CYCLE:STD_LOGIC_VECTOR(1 downto 0);
 signal	SHUT_UP:STD_LOGIC_VECTOR(1 downto 0);
 signal	IDE_BASEADR:STD_LOGIC_VECTOR(7 downto 0);
-signal	MEM_BASE:STD_LOGIC_VECTOR(3 downto 0);
 signal	Dout2:STD_LOGIC_VECTOR(3 downto 0);
 signal	IDE_DSACK_D:STD_LOGIC_VECTOR(IDE_DELAY downto 0);
 signal	DSACK_16BIT:STD_LOGIC;
@@ -368,7 +367,6 @@ begin
 			Dout2 <= "1111";
 			SHUT_UP	<= "11";
 			IDE_BASEADR <= x"FF";
-			MEM_BASE <= x"F";
 			LE_020_RAM <= '1';
 			LE_RAM_020_P <= '1';
 			OE_020_RAM <= '1';
@@ -420,6 +418,7 @@ begin
 					MEM_SPACE_ENABLE(6 downto 1) <="000000";
 				elsif(MEM_CFG2='1' and MEM_CFG1 = '0')then --disable completely!
 					MEM_SPACE_ENABLE(6 downto 0) <="0000000";
+					AUTO_CONFIG_DONE(0) <='1'; --disable autoconfig!
 				else
 					MEM_SPACE_ENABLE(6 downto 2) <="00011";
 				end if;
@@ -635,7 +634,14 @@ begin
 			
 			--MEM address decode section 
 			if(
-					(A(23 downto 20) = (MEM_BASE) and SHUT_UP(0) ='0')
+					(A(23 downto 20) = x"2"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"3"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"4"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"5"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
+				or	(A(23 downto 20) = x"6"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
+				or (A(23 downto 20) = x"7"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
+				or (A(23 downto 20) = x"8"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
+				or (A(23 downto 20) = x"9"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
 				or (A(23 downto 20) = x"C" 		and MEM_SPACE_ENABLE(2)='1')
 				or (A(23 downto 19) = (x"D"&'0') and MEM_SPACE_ENABLE(2)='1')
 				or (A(23 downto 20) = (x"A") 		and MEM_SPACE_ENABLE(3)='1')
@@ -993,19 +999,24 @@ begin
 						
 						if(AUTO_CONFIG_DONE(0)='0') then
 							Dout2(0) <=	'0' ;--ZII, Memory,  no ROM							
-							if(MEM_CFG1='0')then
-								Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
-							end if;
+							--if(MEM_CFG1='0')then
+							--	Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
+							--end if;
 						else
 							if(AUTO_BOOT='1') then
 								Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
 							end if;
 						end if;
 					when "000001"	=> 
-						--one Card, 64kb = 001
-						Dout2(1) <=	'0' ;
-						if(AUTO_CONFIG_DONE(0)='1') then
-							Dout2(2) <=	'0' ;
+						if(AUTO_CONFIG_DONE(0)='0' and MEM_CFG1='1' and MEM_CFG2='1' ) then
+							--8mb
+							Dout2(2 downto 0) <= "000" ;
+						elsif(AUTO_CONFIG_DONE(0)='0' and MEM_CFG1='0' and MEM_CFG2='0' ) then
+							--4mb
+							Dout2(2 downto 0) <= "111" ;
+						elsif(AUTO_CONFIG_DONE(0)='1') then
+							--one Card, 64kb = 001
+							Dout2(2 downto 0) <= "001" ;
 						end if;
 						Dout2(3) <=	'0' ;
 					--when "000010"	=> 
@@ -1086,7 +1097,14 @@ begin
 					when "100100"	=> 
 
 						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "00")then 
-							MEM_BASE <= D(31 downto 28);
+							if(MEM_CFG1='1' and MEM_CFG2='1' ) then
+								--8mb
+								MEM_SPACE_ENABLE(1 downto 0) <= "11";
+							else
+								--4mb
+								MEM_SPACE_ENABLE(1 downto 0) <= "01";
+							end if;
+
 							SHUT_UP(0) <= '0'; --enable board
 							AUTO_CONFIG_DONE_CYCLE	<= "01"; --done here
 						end if;

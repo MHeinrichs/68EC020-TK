@@ -254,10 +254,11 @@ begin
 	CLK_000_PE <= CLK_000_D(0) AND NOT CLK_000_D(1);
 	CLK_000_NE <= NOT CLK_000_D(0) AND CLK_000_D(1);
 	--output clock assignment
-	CLK_PLL_REF <= CLK_OSZI;
+	CLK_PLL_REF <= CLK_000; --CLK_OSZI;
 	CLK_020 <=CLK_GEN(1);--quarter the PLL-Clock
 	
-	S <= "01"; --6x =100MHz
+	--S <= "01"; --6x =100MHz
+	S <= "10"; --16x =112MHz with CLK_PLL = 7MHz
 	--S <= "0Z"; --8x =133MHz
 		--pos edge clock process
 	--no ansynchronious reset! the reset is sampled synchroniously
@@ -316,6 +317,8 @@ begin
 			LE_RAM_020 <= LE_RAM_020_P;
 		end if;
 	end process;
+
+--	LE_RAM_020 <= LE_RAM_020_P;
 
 	pos_clk: process(CLK_PLL,RESET_INT)
 	begin
@@ -692,7 +695,10 @@ begin
 			--latch control for reads
 			if(CQ=start_ras)then --cl2
 				LE_RAM_020_P<= '0';--not RW;
-			elsif(CQ=data_wait or CQ =start_state)then
+			elsif(
+						CQ=data_wait 
+						--CQ=precharge 
+						or CQ =start_state)then
 				LE_RAM_020_P<= '1';
 			end if;
 			--output buffer control
@@ -988,7 +994,7 @@ begin
 --					AUTO_CONFIG_DONE_CYCLE	<= "00";
 --					AUTO_CONFIG_DONE <= "00";
 --				els
-			if(AS_020= '1' and AS_020_D0= '0' )then
+			if(AUTO_CONFIG = '1' and AS_020= '1' and AS_020_D0= '0' )then
 				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE;
 			end if;
 		

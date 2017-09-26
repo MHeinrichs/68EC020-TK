@@ -6,7 +6,10 @@
   <DeviceList devices="xc9500xl"/>
 
   <Properties>
+    <property name="Synthesize - XST:Optimization Effort" value="High"/>
     <property name="Synthesize - XST:FSM Encoding Algorithm" value="Auto"/>
+    <property name="Synthesize - XST:Safe Implementation" value="Yes"/>
+    <property name="Synthesize - XST:Case Implementation Style" value="Full-Parallel"/>
   </Properties>
 
 </DesignStrategy>

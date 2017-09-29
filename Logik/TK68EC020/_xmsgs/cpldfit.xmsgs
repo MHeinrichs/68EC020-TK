@@ -23,13 +23,13 @@
 <msg type="warning" file="Cpld" num="1239" delta="old" >The global <arg fmt="%s" index="1">clock</arg> designation (BUFG) on signal &apos;<arg fmt="%s" index="2">CLK_PLL_REF_OBUF</arg>&apos; is ignored. Most likely the signal is gated and therefore cannot be used as a global control signal.
 </msg>
 
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">11</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">D&lt;28&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">11</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">D&lt;29&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
 <msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">16</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">ARAM&lt;10&gt;</arg> to allow all signals assigned to this function block to be placed.
-</msg>
-
-<msg type="error" file="Cpld" num="886" delta="old" >Function block <arg fmt="%s" index="1">FB14</arg> was too congested to route successfully. This occurs due to excessive (&gt;= 50) product term input fanins to this function block. Consider moving output signals in this function block to less congested function blocks, buffering output signals that must remain in this function block, or selecting a larger package.
-</msg>
-
-<msg type="error" file="Cpld" num="868" delta="old" >Cannot fit the design into any of the specified devices with the selected implementation options.
 </msg>
 
 </messages>

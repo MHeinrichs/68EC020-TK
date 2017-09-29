@@ -250,6 +250,7 @@ signal	RAM_CYCLE_START : STD_LOGIC;
 signal	LE_RAM_020_P : STD_LOGIC;
 signal 	MEM_SPACE_ENABLE :  STD_LOGIC_VECTOR (2 downto 0);
 signal 	ROM_OVERLAY_ENABLE :  STD_LOGIC:='0';
+signal 	MEM_CGF_SET :  STD_LOGIC:='0';
 begin
 
 	CLK_000_PE <= CLK_000_D(0) AND NOT CLK_000_D(1);
@@ -363,8 +364,8 @@ begin
 			CLK_020_PE <= "00";
 			-- reset active ...
 			AUTO_CONFIG_PAUSE <= '0';
-			AUTO_CONFIG_DONE_CYCLE	<= "000";
-			AUTO_CONFIG_DONE	<= "000";
+			AUTO_CONFIG_DONE_CYCLE	<= "010";
+			AUTO_CONFIG_DONE	<= "010";
 			IDE_ENABLE 		<='0';
 			IDE_R_S		<= '1';
 			IDE_BUF_DIR <= '1';
@@ -404,6 +405,7 @@ begin
 			ROM_SPACE <= '0';
 			AUTO_CONFIG <= '0';
 			MEM_SPACE_ENABLE <= (others => '0');	
+			MEM_CGF_SET <='0';
 		elsif(rising_edge(CLK_PLL)) then
 
 			--the statemachine
@@ -635,29 +637,7 @@ begin
 						
 	
 			TK_CYCLE <='1';--default value
-			
-			--mem enable section
-			if(INIT_COMPLETE= '0' )then
-				case MEM_CFG is
-					when "00" =>
-						--disable everything!
-						AUTO_CONFIG_DONE(1 downto 0) <="11"; --disable autoconfig!
-					when "01" =>
-						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
-						--AUTO_CONFIG_DONE(1 downto 0) <="00"; --disable 2MB by enabling two autoconfigs 4&2mb
-					when "10" =>
-						--leave ranger disable!
-						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
-					when "11" =>
-						--enable everything!
-						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
-						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
-					when others =>
-						--enable everything!
-						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
-						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
-				end case;
-			end if;
+		
 			
 			--ROM address decode section
 			if(
@@ -1012,7 +992,32 @@ begin
 			end case;
 		
 
-		--Autoconfig(tm) data-encoding
+			--Autoconfig(tm) data-encoding
+			--mem enable section
+			if(MEM_CGF_SET= '0' )then
+				MEM_CGF_SET <='1';
+				case MEM_CFG is
+					when "00" =>
+						--disable everything!
+						MEM_SPACE_ENABLE(2) <='0'; --disable ranger
+						AUTO_CONFIG_DONE(1 downto 0) <="11"; --disable autoconfig!
+					when "01" =>
+						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
+						AUTO_CONFIG_DONE(1 downto 0) <="00"; --disable 2MB by enabling two autoconfigs 4&2mb
+					when "10" =>
+						MEM_SPACE_ENABLE(2) <='0'; --disable ranger
+						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
+					when "11" =>
+						--enable everything!
+						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
+						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
+					when others =>
+						--enable everything!
+						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
+						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
+				end case;
+			end if;
+
 --				if( 	A(31 downto 16) = x"00E8" 
 --						and A (6 downto 1)= "100100"
 --						and RW_020='0' and AS_020_D0='0')  then
@@ -1028,8 +1033,11 @@ begin
 --					AUTO_CONFIG_DONE_CYCLE	<= "00";
 --					AUTO_CONFIG_DONE <= "00";
 --				els
-			if(AUTO_CONFIG = '1' and AS_020_D0= '1' and AS_020_D1= '0' )then
-				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE;
+
+
+
+			if(AUTO_CONFIG = '1' and AS_020_D0= '1' and AS_020_D1= '0' and MEM_CGF_SET ='1' )then
+				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE OR AUTO_CONFIG_DONE;
 			end if;
 		
 			if(AUTO_CONFIG = '1' and AS_020_D0 = '0') then
@@ -1048,22 +1056,27 @@ begin
 							Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
 						end if;
 					when "000001"	=> 
-						if(AUTO_CONFIG_DONE(1 downto 0)="10") then
-							--8mb
-							Dout2(2 downto 0) <= "000" ;
-						--elsif(AUTO_CONFIG_DONE(1 downto 0)="00") then
-						--	--4mb
-						--	Dout2(2 downto 0) <= "111" ;
-						elsif(AUTO_CONFIG_DONE(1 downto 0)="01") then
-							--2MB
-							--Dout2(2 downto 0) <= "110" ;
-							Dout2(0) <= '0' ;
-						elsif(AUTO_CONFIG_DONE(1 downto 0)="11") then
-							--one Card, 64kb = 001
-							--Dout2(2 downto 0) <= "001" ;
-							Dout2(2 downto 1) <= "00" ;
-						end if;
 						Dout2(3) <=	'0' ;
+						case AUTO_CONFIG_DONE(1 downto 0) is
+							when "00" =>
+								--4mb
+								Dout2(2 downto 0) <= "111" ;
+							when "10" =>
+								--8mb
+								Dout2(2 downto 0) <= "000" ;
+							when "01" =>
+								--2MB
+								--Dout2(2 downto 0) <= "110" ;
+								Dout2(0) <= '0' ;
+							when "11" =>
+								--one Card, 64kb = 001
+								--Dout2(2 downto 0) <= "001" ;
+								Dout2(2 downto 0) <= "001" ;
+							when others =>
+								--one Card, 64kb = 001
+								--Dout2(2 downto 0) <= "001" ;
+								Dout2(2 downto 0) <= "001" ;
+						end case;
 					--when "000010"	=> 
 					--	Dout1 <=	"1111" ; --ProductID high nibble : F->0000=0
 					--	Dout2 <=	"1111" ; --ProductID high nibble : F->0000=0

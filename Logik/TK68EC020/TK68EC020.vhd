@@ -364,8 +364,8 @@ begin
 			CLK_020_PE <= "00";
 			-- reset active ...
 			AUTO_CONFIG_PAUSE <= '0';
-			AUTO_CONFIG_DONE_CYCLE	<= "010";
-			AUTO_CONFIG_DONE	<= "010";
+			AUTO_CONFIG_DONE_CYCLE	<= "000";
+			AUTO_CONFIG_DONE	<= "000";
 			IDE_ENABLE 		<='0';
 			IDE_R_S		<= '1';
 			IDE_BUF_DIR <= '1';
@@ -1017,24 +1017,6 @@ begin
 						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
 				end case;
 			end if;
-
---				if( 	A(31 downto 16) = x"00E8" 
---						and A (6 downto 1)= "100100"
---						and RW_020='0' and AS_020_D0='0')  then
---					AUTO_CONFIG_FINISH <= '1';
---				else
---					AUTO_CONFIG_FINISH <= '0';
---				end if;
-			
---				-- wait one autoconfig-strobe for CDTV!
---				if(AUTO_CONFIG_FINISH = '1'
---					and AS_020_D0='1' and AUTO_CONFIG_PAUSE ='1') then
---					AUTO_CONFIG_PAUSE <= '0';
---					AUTO_CONFIG_DONE_CYCLE	<= "00";
---					AUTO_CONFIG_DONE <= "00";
---				els
-
-
 
 			if(AUTO_CONFIG = '1' and AS_020_D0= '1' and AS_020_D1= '0' and MEM_CGF_SET ='1' )then
 				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE OR AUTO_CONFIG_DONE;

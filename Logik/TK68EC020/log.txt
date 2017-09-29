@@ -906,6 +906,14 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CO
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_CYCLE_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_CYCLE_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_CYCLE_0\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
@@ -935,6 +943,14 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CO
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_2\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
+
+CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
@@ -1038,18 +1054,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/IPL_020
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_CYCLE_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_CYCLE_1\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_CYCLE_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_CYCLE_1\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDS_000_INT\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/UDS_000_INT\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
@@ -1095,18 +1099,6 @@ CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_na
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/OE_020_RAM\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/OE_020_RAM\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_1\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020/AUTO_CONFIG_DONE_1\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
 
 CS: block property: block_name=/TK68EC020/EXPANDED_FlattenFull/TK68EC020 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "TK68EC020"
 

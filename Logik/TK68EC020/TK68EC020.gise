@@ -70,12 +70,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1506436120" xil_pn:in_ck="3145705658252601627" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-7729971835885238775" xil_pn:start_ts="1506436108">
+    <transform xil_pn:end_ts="1506624150" xil_pn:in_ck="3145705658252601627" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-975132420618640751" xil_pn:start_ts="1506624068">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="TK68EC020.lso"/>
       <outfile xil_pn:name="TK68EC020.ngc"/>
       <outfile xil_pn:name="TK68EC020.ngr"/>
@@ -93,21 +91,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1506436128" xil_pn:in_ck="-6858439719358448192" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="6932115226421322529" xil_pn:start_ts="1506436120">
+    <transform xil_pn:end_ts="1506624158" xil_pn:in_ck="-6858439719358448192" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="6932115226421322529" xil_pn:start_ts="1506624150">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TK68EC020.bld"/>
       <outfile xil_pn:name="TK68EC020.ngd"/>
       <outfile xil_pn:name="TK68EC020_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1506436165" xil_pn:in_ck="-3595171075129104466" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-4964576480181507204" xil_pn:start_ts="1506436128">
+    <transform xil_pn:end_ts="1506624197" xil_pn:in_ck="-3595171075129104466" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-4964576480181507204" xil_pn:start_ts="1506624158">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TK68EC020.gyd"/>
       <outfile xil_pn:name="TK68EC020.mfd"/>
       <outfile xil_pn:name="TK68EC020.nga"/>
@@ -122,17 +118,15 @@
       <outfile xil_pn:name="TK68EC020_html"/>
       <outfile xil_pn:name="TK68EC020_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1506436167" xil_pn:in_ck="-3595171075129095602" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1506436165">
+    <transform xil_pn:end_ts="1506624199" xil_pn:in_ck="-3595171075129095602" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1506624197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TK68EC020.jed"/>
     </transform>
     <transform xil_pn:end_ts="1506435643" xil_pn:in_ck="-3595171075129108888" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1506435642">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
@@ -144,7 +138,6 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>

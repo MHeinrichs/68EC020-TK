@@ -3231,11 +3231,11 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="54.020325" y="9.78525" size="1.016" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="55.101125" y="11.91885" size="1.016" layer="28" rot="MR270"/>
 </element>
-<element name="IC8" library="SMD-IC" package="TSOP2-54@2" value="K4S56163" x="97.6" y="28.2575" smashed="yes">
+<element name="IC8" library="SMD-IC" package="TSOP2-54@2" value="AS4C4M16SA-6TCN" x="97.6" y="28.2575" smashed="yes">
 <attribute name="NAME" x="111.5441" y="23.2288" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="100.14" y="30.7975" size="1.27" layer="27"/>
 </element>
-<element name="IC9" library="SMD-IC" package="TSOP2-54@2" value="K4S56163" x="97.6" y="12.22375" smashed="yes">
+<element name="IC9" library="SMD-IC" package="TSOP2-54@2" value="AS4C4M16SA-6TCN" x="97.6" y="12.22375" smashed="yes">
 <attribute name="NAME" x="111.72825" y="7.0744" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="100.14" y="14.76375" size="1.27" layer="27"/>
 </element>
@@ -3247,11 +3247,11 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="97.1048" y="33.41775" size="1.016" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="99.2384" y="37.24175" size="1.016" layer="28" rot="MR180"/>
 </element>
-<element name="IC6" library="SMD-IC" package="TSSOP56@2" value="74ALVT16543" x="81.3689" y="12.22375" smashed="yes" rot="R270">
+<element name="IC6" library="SMD-IC" package="TSSOP56@2" value="74LVT16543" x="81.3689" y="12.22375" smashed="yes" rot="R270">
 <attribute name="NAME" x="78.48345" y="19.3515" size="0.8128" layer="21"/>
 <attribute name="VALUE" x="78.8689" y="17.22375" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="IC7" library="SMD-IC" package="TSSOP56@2" value="74ALVT16543" x="81.3689" y="28.2575" smashed="yes" rot="R270">
+<element name="IC7" library="SMD-IC" package="TSSOP56@2" value="74LVT16543" x="81.3689" y="28.2575" smashed="yes" rot="R270">
 <attribute name="NAME" x="78.2993" y="36.3441" size="1.27" layer="21"/>
 <attribute name="VALUE" x="78.8689" y="33.2575" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -3299,7 +3299,7 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="79.37095" y="21.10115" size="1.016" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="78.29015" y="24.75875" size="1.016" layer="28" rot="MR90"/>
 </element>
-<element name="C28" library="rcl" package="C0603K" value="10nF" x="79.94015" y="33.02" smashed="yes" rot="MR90">
+<element name="C28" library="rcl" package="C0603K" value="100nF" x="79.94015" y="33.02" smashed="yes" rot="MR90">
 <attribute name="NAME" x="79.37095" y="28.5624" size="1.016" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="78.29015" y="32.22" size="1.016" layer="28" rot="MR90"/>
 </element>
@@ -3379,7 +3379,7 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="58.05805" y="83.6041" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="56.95315" y="89.2175" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="IC12" library="am29-memory" package="PLCC-SR32" value="AM29F010S" x="13.0175" y="90.805" smashed="yes" rot="R90">
+<element name="IC12" library="am29-memory" package="PLCC-SR32" value="AM29F010S-10" x="13.0175" y="90.805" smashed="yes" rot="R90">
 <attribute name="VALUE" x="2.2225" y="89.535" size="1.27" layer="27" ratio="10" rot="R90"/>
 <attribute name="NAME" x="2.2225" y="83.185" size="1.27" layer="25" ratio="10" rot="R90"/>
 </element>
@@ -3395,7 +3395,7 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="95.5421" y="91.8718" size="1.27" layer="25"/>
 <attribute name="VALUE" x="94.9325" y="92.075" size="1.27" layer="27"/>
 </element>
-<element name="C39" library="rcl" package="C1206K" value="47µF" x="56.9214" y="88.3412" smashed="yes" rot="R270">
+<element name="C39" library="rcl" package="C1206K" value="47uF" x="56.9214" y="88.3412" smashed="yes" rot="R270">
 <attribute name="NAME" x="55.5892" y="88.662" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="55.0214" y="89.3412" size="1.016" layer="27" rot="R270"/>
 </element>
@@ -3423,7 +3423,7 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="121.12625" y="91.86545" size="1.778" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="108.42625" y="99.85375" size="1.778" layer="27" ratio="10"/>
 </element>
-<element name="IC13" library="xilinx_xc9572xl-tq100" package="TQFP144" value="XC95288XL-TQ144" x="93.50375" y="65.7225" smashed="yes" rot="R270">
+<element name="IC13" library="xilinx_xc9572xl-tq100" package="TQFP144" value="XC95288XL-TQ144-10ns" x="93.50375" y="65.7225" smashed="yes" rot="R270">
 <attribute name="NAME" x="105.31475" y="74.3585" size="1.778" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="90.96375" y="70.8025" size="1.778" layer="27" ratio="10" rot="R270"/>
 </element>
@@ -3516,7 +3516,7 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="120.8023" y="32.5605" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="117.4495" y="33.9461" size="1.016" layer="27" rot="R180"/>
 </element>
-<element name="FB1" library="rcl" package="R0603" value="100Ohm@100MHz" x="116.5606" y="33.9471" smashed="yes" rot="R180">
+<element name="FB1" library="rcl" package="R0603" value="120Ohm@100MHz 0.5A" x="116.5606" y="33.9471" smashed="yes" rot="R180">
 <attribute name="NAME" x="120.8532" y="34.5313" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="117.1956" y="35.8521" size="1.27" layer="27" rot="R180"/>
 </element>

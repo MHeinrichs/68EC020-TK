@@ -8,24 +8,24 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -34,8 +34,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -43,13 +43,13 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -11254,16 +11254,16 @@ nc	1	x20
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="P+8" library="supply1" deviceset="3,3V" device="" value="3,3V"/>
-<part name="IC8" library="SMD-IC" deviceset="K4S56163@2" device="" value="K4S56163"/>
-<part name="IC9" library="SMD-IC" deviceset="K4S56163@2" device="" value="K4S56163"/>
+<part name="IC8" library="SMD-IC" deviceset="K4S56163@2" device="" value="AS4C4M16SA-6TCN"/>
+<part name="IC9" library="SMD-IC" deviceset="K4S56163@2" device="" value="AS4C4M16SA-6TCN"/>
 <part name="C17" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C18" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="GND9" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="GND10" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="GND11" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="GND12" library="supply1" deviceset="GND" device="" value="GND"/>
-<part name="IC6" library="SMD-IC" deviceset="ABT16543@2" device="" value="74ALVT16543"/>
-<part name="IC7" library="SMD-IC" deviceset="ABT16543@2" device="" value="74ALVT16543"/>
+<part name="IC6" library="SMD-IC" deviceset="ABT16543@2" device="" value="74LVT16543"/>
+<part name="IC7" library="SMD-IC" deviceset="ABT16543@2" device="" value="74LVT16543"/>
 <part name="RN1" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
 <part name="RN2" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
 <part name="RN3" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
@@ -11275,7 +11275,7 @@ nc	1	x20
 <part name="C25" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C26" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C30" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
-<part name="C28" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
+<part name="C28" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C29" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C31" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C19" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
@@ -11295,11 +11295,11 @@ nc	1	x20
 <part name="IDE" library="con-harting-ml" deviceset="ML40" device=""/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="4.7k"/>
 <part name="F1" library="rcl" deviceset="R-EU_" device="R2512" value="500mA"/>
-<part name="IC12" library="am29-memory" deviceset="AM29F010S" device=""/>
+<part name="IC12" library="am29-memory" deviceset="AM29F010S" device="" value="AM29F010S-10"/>
 <part name="IDE_ACT" library="con-molex" deviceset="22-?-02" device="05-7028"/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="330"/>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
-<part name="C39" library="rcl" deviceset="C-EU" device="C1206K" value="47µF"/>
+<part name="C39" library="rcl" deviceset="C-EU" device="C1206K" value="47uF"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="C40" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C41" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
@@ -11309,7 +11309,7 @@ nc	1	x20
 <part name="JTAG" library="con-harting-ml" deviceset="ML10" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" deviceset="VCC" device=""/>
-<part name="IC13" library="xilinx_xc9572xl-tq100" deviceset="XC95288XL-TQ144" device=""/>
+<part name="IC13" library="xilinx_xc9572xl-tq100" deviceset="XC95288XL-TQ144" device="" value="XC95288XL-TQ144-10ns"/>
 <part name="C46" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C47" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C48" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
@@ -11358,7 +11358,7 @@ nc	1	x20
 <part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND39" library="supply1" deviceset="GND" device=""/>
 <part name="C44" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
-<part name="FB1" library="rcl" deviceset="R-EU_" device="R0603" value="100Ohm@100MHz"/>
+<part name="FB1" library="rcl" deviceset="R-EU_" device="R0603" value="120Ohm@100MHz 0.5A"/>
 <part name="R15" library="rcl" deviceset="R-EU_" device="R0603" value="33"/>
 <part name="R17" library="rcl" deviceset="R-EU_" device="R0603" value="33"/>
 <part name="R18" library="rcl" deviceset="R-EU_" device="R0603" value="33"/>

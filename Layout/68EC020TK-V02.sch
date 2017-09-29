@@ -11155,30 +11155,30 @@ nc	1	x20
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="P+8" library="supply1" deviceset="3,3V" device="" value="3,3V"/>
-<part name="IC8" library="SMD-IC" deviceset="K4S56163@2" device="" value="K4S56163"/>
-<part name="IC9" library="SMD-IC" deviceset="K4S56163@2" device="" value="K4S56163"/>
+<part name="IC8" library="SMD-IC" deviceset="K4S56163@2" device="" value="AS4C4M16SA-6TCN"/>
+<part name="IC9" library="SMD-IC" deviceset="K4S56163@2" device="" value="AS4C4M16SA-6TCN"/>
 <part name="C17" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C18" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="GND9" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="GND10" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="GND11" library="supply1" deviceset="GND" device="" value="GND"/>
 <part name="GND12" library="supply1" deviceset="GND" device="" value="GND"/>
-<part name="IC6" library="SMD-IC" deviceset="ABT16543@2" device="" value="74ALVT16543"/>
-<part name="IC7" library="SMD-IC" deviceset="ABT16543@2" device="" value="74ALVT16543"/>
+<part name="IC6" library="SMD-IC" deviceset="ABT16543@2" device="" value="74LVT16543"/>
+<part name="IC7" library="SMD-IC" deviceset="ABT16543@2" device="" value="74LVT16543"/>
 <part name="RN1" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
 <part name="RN2" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
 <part name="RN3" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
 <part name="RN4" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
 <part name="RN5" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
 <part name="RN6" library="SMD" deviceset="R-NETZ@3" device="" value="33R"/>
-<part name="C27" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
-<part name="C24" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
-<part name="C25" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
-<part name="C26" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
-<part name="C30" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
-<part name="C28" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
-<part name="C29" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
-<part name="C31" library="rcl" deviceset="C-EU" device="C0603K" value="10nF"/>
+<part name="C27" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="C24" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="C25" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="C26" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="C30" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="C28" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="C29" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="C31" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C19" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C20" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C21" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
@@ -11196,11 +11196,11 @@ nc	1	x20
 <part name="IDE" library="con-harting-ml" deviceset="ML40" device=""/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="4.7k"/>
 <part name="F1" library="rcl" deviceset="R-EU_" device="R2512" value="500mA"/>
-<part name="IC12" library="am29-memory" deviceset="AM29F010S" device=""/>
+<part name="IC12" library="am29-memory" deviceset="AM29F010S" device="" value="AM29F010S-10"/>
 <part name="IDE_ACT" library="con-molex" deviceset="22-?-02" device="05-7028"/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="330"/>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
-<part name="C39" library="rcl" deviceset="C-EU" device="C0805K" value="47µF"/>
+<part name="C39" library="rcl" deviceset="C-EU" device="C1206K" value="47uF"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="C40" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C41" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
@@ -11210,7 +11210,7 @@ nc	1	x20
 <part name="JTAG" library="con-harting-ml" deviceset="ML10" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" deviceset="VCC" device=""/>
-<part name="IC13" library="xilinx_xc9572xl-tq100" deviceset="XC95288XL-TQ144" device=""/>
+<part name="IC13" library="xilinx_xc9572xl-tq100" deviceset="XC95288XL-TQ144" device="" value="XC95288XL-TQ144-10ns"/>
 <part name="C46" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C47" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C48" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
@@ -11254,12 +11254,12 @@ nc	1	x20
 <part name="SJ2" library="jumper" deviceset="SJ2W" device=""/>
 <part name="IC10" library="74xx-eu" deviceset="74*245" device="PW" technology="HCT" value="74HCT245PW"/>
 <part name="IC15" library="74xx-eu" deviceset="74*245" device="PW" technology="HCT" value="74HCT245PW"/>
-<part name="X1" library="SMD-Crystal" deviceset="CSX-750FC" device="FC(5V)"/>
-<part name="C43" library="rcl" deviceset="C-EU" device="C0603K"/>
+<part name="X1" library="SMD-Crystal" deviceset="CSX-750FC" device="FC(5V)" value="16,66MHz / 3.3V"/>
+<part name="C43" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND39" library="supply1" deviceset="GND" device=""/>
-<part name="C44" library="rcl" deviceset="C-EU" device="C0603K"/>
-<part name="FB1" library="rcl" deviceset="R-EU_" device="R0603" value="100Ohm@100MHz"/>
+<part name="C44" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
+<part name="FB1" library="rcl" deviceset="R-EU_" device="R0603" value="120Ohm@100MHz 0.5A"/>
 <part name="R15" library="rcl" deviceset="R-EU_" device="R0603" value="33"/>
 <part name="R17" library="rcl" deviceset="R-EU_" device="R0603" value="33"/>
 <part name="R18" library="rcl" deviceset="R-EU_" device="R0603" value="33"/>

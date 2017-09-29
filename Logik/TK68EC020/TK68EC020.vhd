@@ -85,8 +85,7 @@ entity TK68EC020 is
            ROM_EN : out  STD_LOGIC;
            ROM_OE : out  STD_LOGIC;
            ROM_WE : out  STD_LOGIC;
-           MEM_CFG1 : in  STD_LOGIC;
-           MEM_CFG2 : in  STD_LOGIC;
+           MEM_CFG : in  STD_LOGIC_VECTOR (1 downto 0);
            AUTO_BOOT : in  STD_LOGIC;
            CDIS : out  STD_LOGIC;
 			  BERR : inout  STD_LOGIC;
@@ -221,11 +220,12 @@ signal	DTACK_DMA: STD_LOGIC;
 signal	TK_CYCLE: STD_LOGIC;
 signal   IDE_SPACE:STD_LOGIC;
 signal   MEM_SPACE:STD_LOGIC;
+signal   ROM_SPACE:STD_LOGIC;
 signal	AUTO_CONFIG:STD_LOGIC;
-signal	AUTO_CONFIG_DONE:STD_LOGIC_VECTOR(1 downto 0);
+signal	AUTO_CONFIG_DONE:STD_LOGIC_VECTOR(2 downto 0);
 signal	AUTO_CONFIG_PAUSE:STD_LOGIC;
-signal	AUTO_CONFIG_DONE_CYCLE:STD_LOGIC_VECTOR(1 downto 0);
-signal	SHUT_UP:STD_LOGIC_VECTOR(1 downto 0);
+signal	AUTO_CONFIG_DONE_CYCLE:STD_LOGIC_VECTOR(2 downto 0);
+signal	SHUT_UP_IDE:STD_LOGIC;
 signal	IDE_BASEADR:STD_LOGIC_VECTOR(7 downto 0);
 signal	Dout2:STD_LOGIC_VECTOR(3 downto 0);
 signal	IDE_DSACK_D:STD_LOGIC_VECTOR(IDE_DELAY downto 0);
@@ -248,7 +248,8 @@ signal 	INIT_COMPLETE  :  STD_LOGIC;
 signal	MEM_DELAY : STD_LOGIC;
 signal	RAM_CYCLE_START : STD_LOGIC;
 signal	LE_RAM_020_P : STD_LOGIC;
-signal 	MEM_SPACE_ENABLE :  STD_LOGIC_VECTOR (6 downto 0);
+signal 	MEM_SPACE_ENABLE :  STD_LOGIC_VECTOR (2 downto 0);
+signal 	ROM_OVERLAY_ENABLE :  STD_LOGIC:='0';
 begin
 
 	CLK_000_PE <= CLK_000_D(0) AND NOT CLK_000_D(1);
@@ -306,6 +307,12 @@ begin
 				RESET_INT <= '1';
 			end if;
 
+			
+			--rom overlay enable section
+			
+			if(A(23 downto 19) = (x"E"&'0') and AS_020_D0 = '0' and AS_020_D1 ='1' and RW_020='0' )then --enable on write on the last word
+				ROM_OVERLAY_ENABLE <='1';
+			end if;
 		end if;
 	end process gen_clk;
 
@@ -348,6 +355,7 @@ begin
 			AMIGA_BUS_ENABLE_DMA_HIGH <= '1';
 			AMIGA_BUS_ENABLE_DMA_LOW <= '1';
 			AS_020_D0		<= '1';
+			AS_020_D1		<= '1';
 			TK_CYCLE			<= '1';
 			CYCLE_DMA		<= "00";
 			AS_000_D0 <='1';
@@ -355,8 +363,8 @@ begin
 			CLK_020_PE <= "00";
 			-- reset active ...
 			AUTO_CONFIG_PAUSE <= '0';
-			AUTO_CONFIG_DONE_CYCLE	<= "00";
-			AUTO_CONFIG_DONE	<= "00";
+			AUTO_CONFIG_DONE_CYCLE	<= "000";
+			AUTO_CONFIG_DONE	<= "000";
 			IDE_ENABLE 		<='0';
 			IDE_R_S		<= '1';
 			IDE_BUF_DIR <= '1';
@@ -368,7 +376,7 @@ begin
 			--AUTO_CONFIG_DONE	<='1';
 			--Dout1 <= "1111";
 			Dout2 <= "1111";
-			SHUT_UP	<= "11";
+			SHUT_UP_IDE	<= '1';
 			IDE_BASEADR <= x"FF";
 			LE_020_RAM <= '1';
 			LE_RAM_020_P <= '1';
@@ -391,7 +399,11 @@ begin
 			MEM_DELAY <='0';
 			RAM_CYCLE_START <='0';
 			ENACLK_PRE <= '1';
-			MEM_SPACE_ENABLE <="0000000";
+			IDE_SPACE <= '0';
+			MEM_SPACE <= '0';
+			ROM_SPACE <= '0';
+			AUTO_CONFIG <= '0';
+			MEM_SPACE_ENABLE <= (others => '0');	
 		elsif(rising_edge(CLK_PLL)) then
 
 			--the statemachine
@@ -626,30 +638,52 @@ begin
 			
 			--mem enable section
 			if(INIT_COMPLETE= '0' )then
-				if(MEM_CFG2='0' )then --enable only autoconfig mem (8 or 4mb)!
-					MEM_SPACE_ENABLE(6 downto 2) <="00000";
-				elsif(MEM_CFG2='1' and MEM_CFG1 = '0')then --disable completely!
-					MEM_SPACE_ENABLE(6 downto 0) <="0000000";
-					AUTO_CONFIG_DONE(0) <='1'; --disable autoconfig!
-				else
-					MEM_SPACE_ENABLE(6 downto 2) <="00011";
-				end if;
+				case MEM_CFG is
+					when "00" =>
+						--disable everything!
+						AUTO_CONFIG_DONE(1 downto 0) <="11"; --disable autoconfig!
+					when "01" =>
+						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
+						--AUTO_CONFIG_DONE(1 downto 0) <="00"; --disable 2MB by enabling two autoconfigs 4&2mb
+					when "10" =>
+						--leave ranger disable!
+						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
+					when "11" =>
+						--enable everything!
+						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
+						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
+					when others =>
+						--enable everything!
+						MEM_SPACE_ENABLE(2) <='1'; --enable ranger
+						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
+				end case;
 			end if;
-
 			
+			--ROM address decode section
+			if(
+					(A(23 downto 19) = (x"F"&'0') and (ROM_OVERLAY_ENABLE='1' or RW_020='0'))
+				or (A(23 downto 19) = (x"F"&'1') and (ROM_OVERLAY_ENABLE='1' or RW_020='0'))
+				or (A(23 downto 19) = (x"E"&'0') and (ROM_OVERLAY_ENABLE='1' or RW_020='0'))
+				)then
+				ROM_SPACE <= '1';
+				TK_CYCLE <='0';
+			else
+				ROM_SPACE <= '0';
+			end if;
 			--MEM address decode section 
 			if(
-					(A(23 downto 20) = x"2"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
-				or (A(23 downto 20) = x"3"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
-				or (A(23 downto 20) = x"4"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
-				or (A(23 downto 20) = x"5"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(0)='1')
-				or	(A(23 downto 20) = x"6"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
-				or (A(23 downto 20) = x"7"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
-				or (A(23 downto 20) = x"8"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
-				or (A(23 downto 20) = x"9"       and SHUT_UP(0) ='0' and MEM_SPACE_ENABLE(1)='1')
+					(A(23 downto 20) = x"2"       and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"3"       and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"4"       and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"5"       and MEM_SPACE_ENABLE(0)='1')
+				or	(A(23 downto 20) = x"6"       and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"7"       and MEM_SPACE_ENABLE(0)='1')
+				or (A(23 downto 20) = x"8"       and MEM_SPACE_ENABLE(1)='1')
+				or (A(23 downto 20) = x"9"       and MEM_SPACE_ENABLE(1)='1')
 				or (A(23 downto 20) = x"C" 		and MEM_SPACE_ENABLE(2)='1')
 				or (A(23 downto 19) = (x"D"&'0') and MEM_SPACE_ENABLE(2)='1')
-				or (A(23 downto 20) = (x"A") 		and MEM_SPACE_ENABLE(3)='1')
+				or (A(23 downto 20) = (x"A") 		and MEM_SPACE_ENABLE(2)='1')
+				or (A(23 downto 19) = (x"B"&'0') and MEM_SPACE_ENABLE(2)='1')
 				) then
 				MEM_SPACE <= '1';
 				TK_CYCLE <='0';
@@ -666,7 +700,7 @@ begin
 
 
 			--IDE address decode section 
-			if(A(23 downto 16) = (IDE_BASEADR) AND SHUT_UP(1) ='0') then
+			if(A(23 downto 16) = (IDE_BASEADR) AND SHUT_UP_IDE ='0') then
 				IDE_SPACE <= '1';
 				TK_CYCLE <='0';
 			else
@@ -674,14 +708,14 @@ begin
 			end if;
 		
 			--Autoconfig(tm) address decode section 
-			if(A(23 downto 16) =x"E8" AND AUTO_CONFIG_DONE /="11") then
+			if(A(23 downto 16) =x"E8" AND AUTO_CONFIG_DONE /="111") then
 				AUTO_CONFIG <= '1';
 				TK_CYCLE <='0';
 			else
 				AUTO_CONFIG <= '0';
 			end if;
 
-			if( MEM_SPACE = '1' and AS_020 = '0'
+			if( (MEM_SPACE = '1' or ROM_SPACE ='1') and AS_020 = '0'
 				and (REFRESH = '1' or CQ /= start_state)) then
 				MEM_DELAY <='1';
 			elsif(AS_020 = '1')then
@@ -881,7 +915,7 @@ begin
 				 if (REFRESH = '1') then
 					 CQ <= refresh_start;
 					 --RAS <= '1';
-				 elsif (	MEM_SPACE = '1' and AS_020 = '0'	and RAM_CYCLE_START ='0'							
+				 elsif (	(MEM_SPACE = '1' or ROM_SPACE ='1') and AS_020 = '0'	and RAM_CYCLE_START ='0'							
 							--and CLK_GEN=MEM_START
 							) then
 					--RAS <= '0';
@@ -994,37 +1028,40 @@ begin
 --					AUTO_CONFIG_DONE_CYCLE	<= "00";
 --					AUTO_CONFIG_DONE <= "00";
 --				els
-			if(AUTO_CONFIG = '1' and AS_020= '1' and AS_020_D0= '0' )then
+			if(AUTO_CONFIG = '1' and AS_020_D0= '1' and AS_020_D1= '0' )then
 				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE;
 			end if;
 		
-			if(AUTO_CONFIG = '1' and AS_020 = '0') then
+			if(AUTO_CONFIG = '1' and AS_020_D0 = '0') then
 				DSACK_16BIT <='1';
 				--Dout2 <=	"1111" ; --default value: set the zeros in the section below
 				case A(6 downto 1) is
 					when "000000"	=> 
 						
 						
-						if(AUTO_CONFIG_DONE(0)='0') then
+						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
 							Dout2(0) <=	'0' ;--ZII, Memory,  no ROM							
 							--if(MEM_CFG1='0')then
 							--	Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
 							--end if;
 						else
-							if(AUTO_BOOT='1') then
-								Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
-							end if;
+							Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
 						end if;
 					when "000001"	=> 
-						if(AUTO_CONFIG_DONE(0)='0' and MEM_CFG1='1'  ) then
+						if(AUTO_CONFIG_DONE(1 downto 0)="10") then
 							--8mb
 							Dout2(2 downto 0) <= "000" ;
-						elsif(AUTO_CONFIG_DONE(0)='0' and MEM_CFG1='0' and MEM_CFG2='0' ) then
-							--4mb
-							Dout2(2 downto 0) <= "111" ;
-						elsif(AUTO_CONFIG_DONE(0)='1') then
+						--elsif(AUTO_CONFIG_DONE(1 downto 0)="00") then
+						--	--4mb
+						--	Dout2(2 downto 0) <= "111" ;
+						elsif(AUTO_CONFIG_DONE(1 downto 0)="01") then
+							--2MB
+							--Dout2(2 downto 0) <= "110" ;
+							Dout2(0) <= '0' ;
+						elsif(AUTO_CONFIG_DONE(1 downto 0)="11") then
 							--one Card, 64kb = 001
-							Dout2(2 downto 0) <= "001" ;
+							--Dout2(2 downto 0) <= "001" ;
+							Dout2(2 downto 1) <= "00" ;
 						end if;
 						Dout2(3) <=	'0' ;
 					--when "000010"	=> 
@@ -1050,14 +1087,14 @@ begin
 					--	Dout1 <=	"1111" ;
 					--	Dout2 <=	"1111" ; --Ventor ID 0
 					when "001001"	=> 							
-						if(AUTO_CONFIG_DONE(0)='0') then
+						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
 							Dout2(1) <=	'0' ;
 						end if;
 						--Ventor ID 1
 						Dout2(3) <=	'0' ;
 					when "001010"	=> 
 						--Ventor ID 2
-						if(AUTO_CONFIG_DONE(0)='0') then
+						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
 							Dout2(0) <=	'0' ;
 						else
 							Dout2(1) <=	'0' ;
@@ -1104,34 +1141,44 @@ begin
 						Dout2(0) <=	'0' ; --Rom vector low byte low  nibble
 					when "100100"	=> 
 
-						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "00")then 
-							if(MEM_CFG1='1' ) then
+						if(DS_020 = '0' and RW_020='0' and (AUTO_CONFIG_DONE(1) = '0' or AUTO_CONFIG_DONE(0) = '0'))then 
+							--enable board
+							if(AUTO_CONFIG_DONE(1)='1' ) then
 								--8mb
 								MEM_SPACE_ENABLE(1 downto 0) <= "11";
+								AUTO_CONFIG_DONE_CYCLE	<= "011"; --done here
 							else
 								--4mb
 								MEM_SPACE_ENABLE(1 downto 0) <= "01";
+								if(AUTO_CONFIG_DONE(0)= '0') then
+									AUTO_CONFIG_DONE_CYCLE	<= "001"; --done here
+								else
+									AUTO_CONFIG_DONE_CYCLE	<= "011"; --done here
+								end if;
 							end if;
-
-							SHUT_UP(0) <= '0'; --enable board
-							AUTO_CONFIG_DONE_CYCLE	<= "01"; --done here
 						end if;
-						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "01")then 
+						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE (1 downto 0) = "11")then 
 							IDE_BASEADR(7 downto 4)	<= D(31 downto 28); --Base adress
-							SHUT_UP(1) <= '0'; --enable board
-							AUTO_CONFIG_DONE_CYCLE	<= "11"; --done here
+							SHUT_UP_IDE <= '0'; --enable board
+							AUTO_CONFIG_DONE_CYCLE	<= "111"; --done here
 						end if;
 					when "100101"	=> 
 
-						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "01")then 
+						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "011")then 
 							IDE_BASEADR(3 downto 0)	<= D(31 downto 28); --Base adress
 						end if;
 					when "100110"	=> 
-						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "00")then 
-							AUTO_CONFIG_DONE_CYCLE	<= "01"; --done here
+						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "000")then 
+							AUTO_CONFIG_DONE_CYCLE	<= "001"; --done here
 						end if;
-						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "01")then 
-							AUTO_CONFIG_DONE_CYCLE	<= "11"; --done here
+						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "010")then 
+							AUTO_CONFIG_DONE_CYCLE	<= "011"; --done here
+						end if;
+						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "001")then 
+							AUTO_CONFIG_DONE_CYCLE	<= "011"; --done here
+						end if;
+						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "011")then 
+							AUTO_CONFIG_DONE_CYCLE	<= "111"; --done here
 						end if;
 					when others	=> 							
 				end case;	
@@ -1163,7 +1210,11 @@ begin
 					--ROM_EN_S			<=	'0';						
 					IDE_W_S		<= '1';
 					IDE_R_S		<= '1';
-					ROM_OE_S		<=	'0';	
+					if(AUTO_BOOT='1') then
+						ROM_OE_S		<=	'0';
+					else 
+						ROM_OE_S		<=	'1';
+					end if;
 				end if;				
 				if(CLK_GEN="11")then
 					IDE_DSACK_D(0)		<=	'1';
@@ -1248,17 +1299,17 @@ begin
 	AVEC 	<=	'1';
 		
 	--as and uds/lds
-	AS_000	<=  'Z' when BGACK_020_INT ='0' or RESET ='0' else
+	AS_000	<=  'Z' when BGACK_020_INT ='0' or RESET_INT ='0' else
 							'0' when AS_000_INT ='0' and AS_020 ='0' else 
 			   			'1';
-	RW_000	<=  'Z' when BGACK_020_INT ='0' or RESET ='0' --tristate on DMA-cycle
+	RW_000	<=  'Z' when BGACK_020_INT ='0' or RESET_INT ='0' --tristate on DMA-cycle
 							else RW_000_INT; -- drive on CPU cycle
 
-	UDS_000	<=  'Z' when BGACK_020_INT ='0' or RESET ='0' else --tristate on DMA cycle
+	UDS_000	<=  'Z' when BGACK_020_INT ='0' or RESET_INT ='0' else --tristate on DMA cycle
 			    		--'1' when DS_000_ENABLE ='0' else 
 							UDS_000_INT when DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet
-	LDS_000	<= 	'Z' when BGACK_020_INT ='0' or RESET ='0' else --tristate on DMA cycle
+	LDS_000	<= 	'Z' when BGACK_020_INT ='0' or RESET_INT ='0' else --tristate on DMA cycle
 			   			--'1' when DS_000_ENABLE ='0' else 
 							LDS_000_INT when  DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet

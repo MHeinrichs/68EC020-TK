@@ -132,6 +132,8 @@ constant RQ_TIMEOUT : integer := 255;
 	--8192 refreshes in 64ms ->8192 refreshes in 3200000 50MHz ticks
 	-- -> Refresh after 390 tics -> 255 is a safe place to be!
 
+constant DS_SAMPLE : integer := 4;
+constant AS_SAMPLE : integer := 4;
 
 	TYPE sdram_state_machine_type IS (
 				powerup, 					
@@ -153,8 +155,6 @@ constant RQ_TIMEOUT : integer := 255;
 				precharge,			
 				precharge_wait			
 				);
-
-constant DS_SAMPLE : integer := 4;
 
 TYPE SM_E IS (
 				E1,
@@ -204,7 +204,7 @@ signal	UDS_000_INT: STD_LOGIC;
 signal	LDS_000_INT: STD_LOGIC;
 signal	DS_000_ENABLE: STD_LOGIC;
 signal	CLK_020_H: STD_LOGIC;
-signal	CLK_000_D: STD_LOGIC_VECTOR ( DS_SAMPLE downto 0 );
+signal	CLK_000_D: STD_LOGIC_VECTOR ( MAX(DS_SAMPLE,AS_SAMPLE) downto 0 );
 signal	CLK_000_PE: STD_LOGIC;
 signal	CLK_000_NE: STD_LOGIC;
 signal	DTACK_D0: STD_LOGIC;
@@ -227,7 +227,10 @@ signal	AUTO_CONFIG_PAUSE:STD_LOGIC;
 signal	AUTO_CONFIG_DONE_CYCLE:STD_LOGIC_VECTOR(2 downto 0);
 signal	SHUT_UP_IDE:STD_LOGIC;
 signal	IDE_BASEADR:STD_LOGIC_VECTOR(7 downto 0);
+signal	Dout:STD_LOGIC_VECTOR(3 downto 0);
+signal	Dout1:STD_LOGIC_VECTOR(3 downto 0);
 signal	Dout2:STD_LOGIC_VECTOR(3 downto 0);
+signal	Dout3:STD_LOGIC_VECTOR(3 downto 0);
 signal	IDE_DSACK_D:STD_LOGIC_VECTOR(IDE_DELAY downto 0);
 signal	DSACK_16BIT:STD_LOGIC;
 signal	DSACK_32BIT:STD_LOGIC;
@@ -376,7 +379,10 @@ begin
 			--AUTO_CONFIG_DONE_CYCLE	<='1';
 			--AUTO_CONFIG_DONE	<='1';
 			--Dout1 <= "1111";
+			Dout	<= "1111";
+			Dout1 <= "1111";
 			Dout2 <= "1111";
+			Dout3 <= "1111";
 			SHUT_UP_IDE	<= '1';
 			IDE_BASEADR <= x"FF";
 			LE_020_RAM <= '1';
@@ -420,7 +426,7 @@ begin
 			if(BGACK_000='0' or BR_000 ='0') then
 				BGACK_020_INT	<= '0';
 				--BGACK_020_INT_PRE<= '0';
-			elsif (	BGACK_000='1' 
+			elsif (	BGACK_000='1' and BR_000 ='1'
 					AND CLK_000_NE='1'
 					AND AS_000 = '1' --the amiga AS can be still active while bgack is deasserted, so wait for this signal too!
 					) then -- BGACK_000 is high here!
@@ -460,6 +466,7 @@ begin
 					BGACK_020_INT_D='1' AND --no dma -cycle
 					TK_CYCLE ='1' and --not an expansion space cycle
 					SM_AMIGA = IDLE_P --last amiga cycle terminated
+					and CLK_GEN="11"
 					) then
 					AS_020_000_SYNC <= '0';					
 			end if;
@@ -491,7 +498,7 @@ begin
 			case (SM_AMIGA) is
 				when IDLE_P 	 => --68000:S0 wait for a falling edge
 					RW_000_INT		<= '1';		
-					if( CLK_000_D(3)='0' and CLK_000_D(4)= '1' and AS_020_000_SYNC = '0' and TK_CYCLE ='1')then -- if this a delayed expansion space detection, do not start an amiga cycle!
+					if( CLK_000_D(AS_SAMPLE-1)='0' and CLK_000_D(AS_SAMPLE)= '1' and AS_020_000_SYNC = '0' and TK_CYCLE ='1')then -- if this a delayed expansion space detection, do not start an amiga cycle!
 						SM_AMIGA<=IDLE_N;  --go to s1
 					end if;
 				when IDLE_N 	 => --68000:S1 place Adress on bus and wait for rising edge, on a rising CLK_000 look for a amiga adressrobe
@@ -534,7 +541,7 @@ begin
 					
 					--go to s7   dsack is sampled at the falling edge of the 020-clock
 					--if(CLK_000_D(0)='0' and CLK_000_D(1)='1')then
-					if(CLK_000_D(4)='1')then
+					if(CLK_000_D(DS_SAMPLE)='1')then
 							DSACK_16BIT <='1'; 
 					end if;
 
@@ -606,7 +613,7 @@ begin
 										
 			--as can only be done if we know the uds/lds!
 			if(	CYCLE_DMA >"00"
-			  and AS_000 = '0'
+			  --and AS_000 = '0'
 				and AMIGA_DS ='0'
 				and (					
 					CYCLE_DMA < "11"				
@@ -1017,55 +1024,81 @@ begin
 						AUTO_CONFIG_DONE(1 downto 0) <="10"; --disable autoconfig for 2nd mem board!
 				end case;
 			end if;
-
+			
 			if(AUTO_CONFIG = '1' and AS_020_D0= '1' and AS_020_D1= '0' and MEM_CGF_SET ='1' )then
 				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE OR AUTO_CONFIG_DONE;
 			end if;
 		
 			if(AUTO_CONFIG = '1' and AS_020_D0 = '0') then
 				DSACK_16BIT <='1';
-				--Dout2 <=	"1111" ; --default value: set the zeros in the section below
+				if(AUTO_CONFIG_DONE(0)='0')then
+					Dout <= Dout1;
+				elsif(AUTO_CONFIG_DONE(1)='0')then
+					Dout <= Dout2;
+				elsif(AUTO_CONFIG_DONE(2)='0')then
+					Dout <= Dout3;
+				end if;
+				
+				--default value: set the actual values in the section below
+				Dout1 <= "1111";
+				Dout2 <= "1111";
+				Dout3 <= "1111";
+				
 				case A(6 downto 1) is
 					when "000000"	=> 
-						
-						
-						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
-							Dout2(0) <=	'0' ;--ZII, Memory,  no ROM							
-							--if(MEM_CFG1='0')then
-							--	Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
-							--end if;
-						else
-							Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
-						end if;
+						Dout1 <="1110";
+						Dout2 <="1110";
+						Dout3 <="1101";
+--						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
+--							Dout2(0) <=	'0' ;--ZII, Memory,  no ROM							
+--							--if(MEM_CFG1='0')then
+--							--	Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
+--							--end if;
+--						else
+--							Dout2(1) <=	'0' ;--ZII, no Memory,  ROM
+--						end if;
 					when "000001"	=> 
-						Dout2(3) <=	'0' ;
-						case AUTO_CONFIG_DONE(1 downto 0) is
-							when "00" =>
-								--4mb
-								Dout2(2 downto 0) <= "111" ;
-							when "10" =>
-								--8mb
-								Dout2(2 downto 0) <= "000" ;
-							when "01" =>
-								--2MB
-								--Dout2(2 downto 0) <= "110" ;
-								Dout2(0) <= '0' ;
-							when "11" =>
-								--one Card, 64kb = 001
-								--Dout2(2 downto 0) <= "001" ;
-								Dout2(2 downto 0) <= "001" ;
-							when others =>
-								--one Card, 64kb = 001
-								--Dout2(2 downto 0) <= "001" ;
-								Dout2(2 downto 0) <= "001" ;
-						end case;
+						if(AUTO_CONFIG_DONE(1)='1')then
+							Dout1 <="0000"; --8mb
+						else
+							Dout1 <="0111"; --4mb
+						end if;
+						Dout2 <="0110"; --2MB
+						Dout3 <="0001"; --one Card, 64kb = 001
+
+--						Dout2(3) <=	'0' ;
+--						case AUTO_CONFIG_DONE(1 downto 0) is
+--							when "00" =>
+--								--4mb
+--								Dout2(2 downto 0) <= "111" ;
+--							when "10" =>
+--								--8mb
+--								Dout2(2 downto 0) <= "000" ;
+--							when "01" =>
+--								--2MB
+--								--Dout2(2 downto 0) <= "110" ;
+--								Dout2(0) <= '0' ;
+--							when "11" =>
+--								--one Card, 64kb = 001
+--								--Dout2(2 downto 0) <= "001" ;
+--								Dout2(2 downto 0) <= "001" ;
+--							when others =>
+--								--one Card, 64kb = 001
+--								--Dout2(2 downto 0) <= "001" ;
+--								Dout2(2 downto 0) <= "001" ;
+--						end case;
 					--when "000010"	=> 
 					--	Dout1 <=	"1111" ; --ProductID high nibble : F->0000=0
 					--	Dout2 <=	"1111" ; --ProductID high nibble : F->0000=0
 					when "000011"	=> 
 						--ProductID low nibble: 9->0110=6
-						Dout2(1) <=	'0' ;
-						Dout2(2) <=	'0' ;
+						Dout1 <="1001";
+						Dout2 <="1001";
+						Dout3 <="1001";
+
+						
+--						Dout2(1) <=	'0' ;
+--						Dout2(2) <=	'0' ;
 					--when "000100"	=> 
 					--	Dout1 <=	"1111" ;
 					--	Dout2 <=	"1111" ; --Z3 Config HIGH                                                                                                                                                                                                                                                                                                                      Dout <=	"1111" ; --Config HIGH: 0x20 and no shut down
@@ -1082,41 +1115,62 @@ begin
 					--	Dout1 <=	"1111" ;
 					--	Dout2 <=	"1111" ; --Ventor ID 0
 					when "001001"	=> 							
-						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
-							Dout2(1) <=	'0' ;
-						end if;
 						--Ventor ID 1
-						Dout2(3) <=	'0' ;
+						Dout1 <="0101";
+						Dout2 <="0101";
+						Dout3 <="0111";
+--						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
+--							Dout2(1) <=	'0' ;
+--						end if;
+--						
+--						Dout2(3) <=	'0' ;
 					when "001010"	=> 
 						--Ventor ID 2
-						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
-							Dout2(0) <=	'0' ;
-						else
-							Dout2(1) <=	'0' ;
-						end if;
-						
+						Dout1 <="1110";
+						Dout2 <="1110";
+						Dout3 <="1101";
+--						if(AUTO_CONFIG_DONE(0)='0' or AUTO_CONFIG_DONE(1)='0') then
+--							Dout2(0) <=	'0' ;
+--						else
+--							Dout2(1) <=	'0' ;
+--						end if;						
 					when "001011"	=> 
 						--Ventor ID 3 : $0A1C: A1k.org
 						--Ventor ID 3 : $082C: BSC
-						Dout2(2) <=	'0' ;
-						Dout2(3) <=	'0' ;
+						Dout1 <="0011";
+						Dout2 <="0011";
+						Dout3 <="0011";
+--						Dout2(2) <=	'0' ;
+--						Dout2(3) <=	'0' ;
 					when "001100"	=> 
 						--Serial byte 0 (msb) high nibble
-						Dout2(0) <=	'0' ;
-						Dout2(1) <=	'0' ;
-						Dout2(3) <=	'0' ;
+						Dout1 <="0100";
+						Dout2 <="0100";
+						Dout3 <="0100";
+--						Dout2(0) <=	'0' ;
+--						Dout2(1) <=	'0' ;
+--						Dout2(3) <=	'0' ;
 					when "001101"	=> 
 						--Serial byte 0 (msb) low  nibble
-						Dout2(0) <=	'0' ;
+						Dout1 <="1110";
+						Dout2 <="1110";
+						Dout3 <="1110";
+--						Dout2(0) <=	'0' ;
 					when "001110"	=> 
 						--Serial byte 1       high nibble
-						Dout2(1) <=	'0' ;							
-						Dout2(2) <=	'0' ;
+						Dout1 <= "1001";
+						Dout2 <= "1001";
+						Dout3 <= "1001";
+--						Dout2(1) <=	'0' ;							
+--						Dout2(2) <=	'0' ;
 					when "001111"	=> 
 						--Serial byte 1       low  nibble
-						Dout2(0) <=	'0' ;
-						Dout2(1) <=	'0' ;
-						Dout2(3) <=	'0' ;
+						Dout1 <= "0100";
+						Dout2 <= "0100";
+						Dout3 <= "0100";
+--						Dout2(0) <=	'0' ;
+--						Dout2(1) <=	'0' ;
+--						Dout2(3) <=	'0' ;
 					--when "010000"	=> 
 					--	Dout1 <=	"1111" ;
 					--	Dout2 <=	"1111" ; --Serial byte 2       high nibble
@@ -1125,17 +1179,26 @@ begin
 						--Dout2 <=	"1111" ; --Serial byte 2       low  nibble
 					when "010010"	=> 
 						--Serial byte 3 (lsb) high nibble
-						Dout2(0) <=	'0' ;
-						Dout2(1) <=	'0' ;
-						Dout2(3) <=	'0' ;
+						Dout1 <= "0100";
+						Dout2 <= "0100";
+						Dout3 <= "0100";
+--						Dout2(0) <=	'0' ;
+--						Dout2(1) <=	'0' ;
+--						Dout2(3) <=	'0' ;
 					when "010011"	=> 
 						--Serial byte 3 (lsb) low  nibble: B16B00B5
-						Dout2(0) <=	'0' ;
-						Dout2(2) <=	'0' ;
+						Dout1 <= "1010";
+						Dout2 <= "1010";
+						Dout3 <= "1010";
+--						Dout2(0) <=	'0' ;
+--						Dout2(2) <=	'0' ;
 					when "010111"	=> 
-						Dout2(0) <=	'0' ; --Rom vector low byte low  nibble
+					   --Rom vector low byte low  nibble
+						Dout1 <= "1110";
+						Dout2 <= "1110";
+						Dout3 <= "1110";
+--						Dout2(0) <=	'0' ;
 					when "100100"	=> 
-
 						if(DS_020 = '0' and RW_020='0' and (AUTO_CONFIG_DONE(1) = '0' or AUTO_CONFIG_DONE(0) = '0'))then 
 							--enable board
 							if(AUTO_CONFIG_DONE(1)='1' ) then
@@ -1158,7 +1221,6 @@ begin
 							AUTO_CONFIG_DONE_CYCLE	<= "111"; --done here
 						end if;
 					when "100101"	=> 
-
 						if(DS_020 = '0' and RW_020='0' and AUTO_CONFIG_DONE = "011")then 
 							IDE_BASEADR(3 downto 0)	<= D(31 downto 28); --Base adress
 						end if;
@@ -1177,8 +1239,10 @@ begin
 						end if;
 					when others	=> 							
 				end case;	
-			else
-				Dout2 <=	"1111" ;
+			else			
+				Dout1 <= "1111";
+				Dout2 <= "1111";
+				Dout3 <= "1111";
 			end if;
 			
 			if(IDE_SPACE = '1' and AS_020 = '0')then
@@ -1205,11 +1269,7 @@ begin
 					--ROM_EN_S			<=	'0';						
 					IDE_W_S		<= '1';
 					IDE_R_S		<= '1';
-					if(AUTO_BOOT='1') then
-						ROM_OE_S		<=	'0';
-					else 
-						ROM_OE_S		<=	'1';
-					end if;
+					ROM_OE_S		<=	'0';
 				end if;				
 				if(CLK_GEN="11")then
 					IDE_DSACK_D(0)		<=	'1';
@@ -1251,9 +1311,9 @@ begin
 	IDE_RESET<= RESET;
 	ROM_EN	<= IDE_ENABLE;
 	ROM_WE	<= '1';
-	ROM_OE	<= ROM_OE_S;
+	ROM_OE	<= ROM_OE_S when AUTO_BOOT ='1' else '1';
 	ROM_B		<= "00";
-	D(31 downto 28)	<=	Dout2 when AUTO_CONFIG = '1' and AS_020 = '0' and RW_020 ='1' else "ZZZZ";
+	D(31 downto 28)	<=	Dout when AUTO_CONFIG = '1' and AS_020 = '0' and RW_020 ='1' else "ZZZZ";
 	--sdram stuff
 	--SD-RAM clock-stuff
 	CLK_RAM 	<= not CLK_PLL;

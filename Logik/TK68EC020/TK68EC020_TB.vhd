@@ -101,8 +101,8 @@ ARCHITECTURE behavior OF TK68EC020_TB IS
            ROM_EN : out  STD_LOGIC;
            ROM_OE : out  STD_LOGIC;
            ROM_WE : out  STD_LOGIC;
-           MEM_CFG1 : in  STD_LOGIC;
-           MEM_CFG2 : in  STD_LOGIC;
+           MEM_CFG : in  STD_LOGIC_VECTOR (1 downto 0);
+
            AUTO_BOOT : in  STD_LOGIC;
            CDIS : out  STD_LOGIC;
 			  BERR : inout  STD_LOGIC;
@@ -181,8 +181,7 @@ ARCHITECTURE behavior OF TK68EC020_TB IS
    signal IPL_000 : STD_LOGIC_VECTOR (2 downto 0) :="111";
    signal BR_000 : std_logic := '1';
    signal VPA : STD_LOGIC :='1';
-   signal MEM_CFG1 : STD_LOGIC :='1';
-   signal MEM_CFG2 : STD_LOGIC :='1';
+   signal MEM_CFG : std_logic_vector(1 downto 0);
    signal AUTO_BOOT : STD_LOGIC :='1';
    signal BERR : STD_LOGIC :='1';
    signal FC : STD_LOGIC_VECTOR (1 downto 0) :="00";
@@ -313,8 +312,7 @@ BEGIN
 			ROM_EN => ROM_EN,
 			ROM_OE => ROM_OE,
 			ROM_WE => ROM_WE,
-			MEM_CFG1 => MEM_CFG1,
-			MEM_CFG2 => MEM_CFG2,
+			MEM_CFG => MEM_CFG,
 			AUTO_BOOT => AUTO_BOOT,
 			CDIS => CDIS,
 			BERR => BERR,
@@ -766,8 +764,7 @@ BEGIN
     IPL_000 <="111";
     BR_000 <= '1';
     VPA <='1';
-    MEM_CFG1 <='1';
-    MEM_CFG2 <='1';
+    MEM_CFG <="11";
     AUTO_BOOT <='1';
     BERR <='1';
     FC <="00";

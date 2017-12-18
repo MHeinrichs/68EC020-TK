@@ -254,6 +254,7 @@ signal	LE_RAM_020_P : STD_LOGIC;
 signal 	MEM_SPACE_ENABLE :  STD_LOGIC_VECTOR (2 downto 0);
 signal 	ROM_OVERLAY_ENABLE :  STD_LOGIC:='0';
 signal 	MEM_CGF_SET :  STD_LOGIC:='0';
+signal 	E_DTACK :  STD_LOGIC:='1';
 begin
 
 	CLK_000_PE <= CLK_000_D(0) AND NOT CLK_000_D(1);
@@ -263,9 +264,10 @@ begin
 	CLK_020 <=CLK_GEN(1);--quarter the PLL-Clock
 	
 	--S <= "01"; --6x =100MHz
-	S <= "10"; --16x =112MHz with CLK_PLL = 7MHz
+	--S <= "10"; --16x =112MHz with CLK_PLL = 7MHz
+	S <= "Z0"; --16x =112MHz with 7MHz and 570B (3.3V)
 	--S <= "0Z"; --8x =133MHz
-		--pos edge clock process
+	--pos edge clock process
 	--no ansynchronious reset! the reset is sampled synchroniously
 	--this mut be because of the e-clock: The E-Clock has to run CONSTANTLY 
 	--or the Amiga will fail to boot from a reset. 
@@ -287,18 +289,35 @@ begin
 
 			if(CLK_000_NE = '1' ) then
 				case (cpu_est) is
-					when E1 => cpu_est <= E2 ; 
-					when E2 => cpu_est <= E3 ;
-					when E3 => cpu_est <= E4;
-					when E4  => cpu_est <= E5 ;
+					when E1 	=>	cpu_est <= E2 ; 									
+					when E2 	=> cpu_est <= E3 ;
+					when E3 	=> cpu_est <= E4;
+					when E4 	=> cpu_est <= E5 ;
 					when E5  => cpu_est <= E6 ;
 					when E6  => cpu_est <= E7 ;
 					when E7  => cpu_est <= E8 ;
 					when E8  => cpu_est <= E9 ;
-					when E9  => cpu_est <= E10;
+					when E9  => cpu_est <= E10;									
 					when E10 => cpu_est <= E1 ;
 				end case;
 			end if;
+			
+			if(cpu_est = E4 and VPA = '0' and AS_000 ='0')then				
+				VMA_INT <= '0'; --assert
+			elsif(cpu_est = E1)then
+				VMA_INT <= '1'; --deassert					
+			end if;
+			
+			
+			if(cpu_est = E9 and VMA_INT = '0' and AS_000 ='0') then
+				E_DTACK <='0'; --generate a DTACK at the right time
+			elsif(AS_000 ='1')then
+				E_DTACK <='1';
+			end if;
+			
+			
+			
+			
 			if(RESET_D0 = '0' and RESET_D1 ='1') then
 				RESET_DLY <= x"0";
 			elsif(CLK_GEN="11")then
@@ -334,7 +353,6 @@ begin
 	pos_clk: process(CLK_PLL,RESET_INT)
 	begin
 		if(RESET_INT = '0' ) then
-			VPA_D			<= '1';
 			DTACK_D0		<= '1';
 			SM_AMIGA		<= IDLE_P;
 			AS_000_INT 		<= '1';
@@ -344,7 +362,6 @@ begin
 			UDS_000_INT		<= '1';
 			LDS_000_INT		<= '1';
 			DS_000_ENABLE	<= '0';
-			VMA_INT			<= '1';
 			BG_000			<= '1';
 			BGACK_020_INT	<= '1';
 			BGACK_020_INT_D <= '1';
@@ -420,7 +437,7 @@ begin
 			AS_020_D0 <= AS_020;
 			AS_020_D1 <= AS_020_D0;
 			DTACK_D0	<= DTACK;
-			VPA_D 		<= VPA;
+
 
 			--bgack is simple: assert as soon as Amiga asserts but hold bg_ack for one amiga-clock 
 			if(BGACK_000='0' or BR_000 ='0') then
@@ -472,12 +489,7 @@ begin
 			end if;
 			
 
-			-- VMA generation
-			if(CLK_000_NE='1' AND VPA_D='0' AND cpu_est = E4)then --assert
-				VMA_INT <= '0';
-			elsif(CLK_000_PE='1' AND cpu_est=E1)then --deassert
-				VMA_INT <= '1';										
-			end if;
+
 			
 			--uds/lds precalculation
 			if (SM_AMIGA = IDLE_N) then --DS: set udl/lds 	
@@ -523,9 +535,12 @@ begin
 					end if;
 				when SAMPLE_DTACK_P=> --68000:S4 wait for dtack or VMA
 					if(	CLK_000_NE='1' and --falling edge
-						((VPA_D = '1' AND DTACK_D0='0') OR --DTACK end cycle
+						(
+						DTACK_D0='0' OR --DTACK end cycle
 						BERR='0' OR
-						(VPA_D='0' AND cpu_est=E9 AND VMA_INT='0')) --VPA end cycle
+						E_DTACK='0'
+						--(VPA_D='0' AND cpu_est=E9 AND VMA_INT='0') --VPA end cycle
+						)
 						)then --go to s5
 						SM_AMIGA<=DATA_FETCH_N;
 					end if;

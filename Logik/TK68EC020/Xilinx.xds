@@ -8,11 +8,8 @@
   <Properties>
     <property name="Synthesize - XST:Optimization Goal" value="Speed"/>
     <property name="Synthesize - XST:Optimization Effort" value="High"/>
-    <property name="Synthesize - XST:Keep Hierarchy" value="Yes"/>
-    <property name="Synthesize - XST:Netlist Hierarchy" value="As Optimized"/>
-    <property name="Synthesize - XST:FSM Encoding Algorithm" value="Compact"/>
-    <property name="Synthesize - XST:Safe Implementation" value="Yes"/>
-    <property name="Synthesize - XST:Case Implementation Style" value="Full-Parallel"/>
+    <property name="Synthesize - XST:Safe Implementation" value="No"/>
+    <property name="Synthesize - XST:Case Implementation Style" value="None"/>
     <property name="Fit:Default Powerup Value of Registers" value="Low"/>
     <property name="Fit:I/O Pin Termination" value="Float"/>
   </Properties>

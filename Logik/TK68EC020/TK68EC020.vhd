@@ -189,6 +189,7 @@ signal	AMIGA_BUS_ENABLE_DMA_LOW:STD_LOGIC;
 signal	AS_020_D0:STD_LOGIC;
 signal	AS_020_D1:STD_LOGIC;
 signal	AS_020_000_SYNC:STD_LOGIC;
+signal	BR_020_EC_INT:STD_LOGIC;
 signal	BGACK_020_INT:STD_LOGIC;
 signal	BGACK_020_INT_D:STD_LOGIC;
 signal	AS_000_DMA:STD_LOGIC;
@@ -264,8 +265,8 @@ begin
 	CLK_020 <=CLK_GEN(1);--quarter the PLL-Clock
 	
 	--S <= "01"; --6x =100MHz
-	--S <= "10"; --16x =112MHz with CLK_PLL = 7MHz
-	S <= "Z0"; --16x =112MHz with 7MHz and 570B (3.3V)
+	S <= "10"; --16x =112MHz with CLK_PLL = 7MHz
+	--S <= "Z0"; --16x =112MHz with 7MHz and 570B (3.3V)
 	--S <= "0Z"; --8x =133MHz
 	--pos edge clock process
 	--no ansynchronious reset! the reset is sampled synchroniously
@@ -287,7 +288,7 @@ begin
 			
 			-- e-clock is changed on the FALLING edge!
 
-			if(CLK_000_NE = '1' ) then
+			if(CLK_000_PE = '1' ) then
 				case (cpu_est) is
 					when E1 	=>	cpu_est <= E2 ; 									
 					when E2 	=> cpu_est <= E3 ;
@@ -309,7 +310,7 @@ begin
 			end if;
 			
 			
-			if(cpu_est = E9 and VMA_INT = '0' and AS_000 ='0') then
+			if(cpu_est = E10 and VMA_INT = '0' and AS_000 ='0') then
 				E_DTACK <='0'; --generate a DTACK at the right time
 			elsif(AS_000 ='1')then
 				E_DTACK <='1';
@@ -363,8 +364,9 @@ begin
 			LDS_000_INT		<= '1';
 			DS_000_ENABLE	<= '0';
 			BG_000			<= '1';
-			BGACK_020_INT	<= '1';
+			BR_020_EC_INT	<= '1';
 			BGACK_020_INT_D <= '1';
+			BGACK_020_INT <= '1';
 			DSACK_16BIT		<= '0';
 			DSACK_32BIT		<= '0';
 			IPL_D0			<= "111";
@@ -441,14 +443,22 @@ begin
 
 			--bgack is simple: assert as soon as Amiga asserts but hold bg_ack for one amiga-clock 
 			if(BGACK_000='0' or BR_000 ='0') then
+				BR_020_EC_INT	<= '0';
+				--BGACK_020_INT_PRE<= '0';
+			end if;
+			
+			if(BGACK_000='0') then
 				BGACK_020_INT	<= '0';
 				--BGACK_020_INT_PRE<= '0';
-			elsif (	BGACK_000='1' and BR_000 ='1'
+			end if;
+
+			if (	BGACK_000='1' and BR_000 ='1'
 					AND CLK_000_NE='1'
 					AND AS_000 = '1' --the amiga AS can be still active while bgack is deasserted, so wait for this signal too!
 					) then -- BGACK_000 is high here!
 				--BGACK_020_INT_PRE<= '1';
 				BGACK_020_INT 	<= '1'; --hold this signal high until 7m clock goes low
+				BGACK_020_INT <='1';
 			end if;
 			BGACK_020_INT_D <= BGACK_020_INT;
 
@@ -456,7 +466,7 @@ begin
 			if(BG_020= '1')then
 				BG_000	<= '1';
 			elsif(	BG_020= '0' --AND (SM_AMIGA 	= IDLE_P)
-					and TK_CYCLE = '1' and AS_020_D0='1'
+					and TK_CYCLE = '1' and IDE_SPACE ='0' and AS_020_D0='1'
 					and CLK_000_D(0)='1' 
 					) then --bus granted no local access and no AS_020 running!
 					BG_000 	<= '0';
@@ -481,9 +491,9 @@ begin
 					AS_020_D1			= '0'  AND --as set
 					BGACK_020_INT='1' AND 
 					BGACK_020_INT_D='1' AND --no dma -cycle
-					TK_CYCLE ='1' and --not an expansion space cycle
+					TK_CYCLE = '1' and IDE_SPACE ='0' and --not an expansion space cycle
 					SM_AMIGA = IDLE_P --last amiga cycle terminated
-					and CLK_GEN="11"
+					and CLK_GEN="10"
 					) then
 					AS_020_000_SYNC <= '0';					
 			end if;
@@ -510,7 +520,7 @@ begin
 			case (SM_AMIGA) is
 				when IDLE_P 	 => --68000:S0 wait for a falling edge
 					RW_000_INT		<= '1';		
-					if( CLK_000_D(AS_SAMPLE-1)='0' and CLK_000_D(AS_SAMPLE)= '1' and AS_020_000_SYNC = '0' and TK_CYCLE ='1')then -- if this a delayed expansion space detection, do not start an amiga cycle!
+					if( CLK_000_D(AS_SAMPLE-1)='0' and CLK_000_D(AS_SAMPLE)= '1' and AS_020_000_SYNC = '0' and TK_CYCLE ='1' and IDE_SPACE = '0')then -- if this a delayed expansion space detection, do not start an amiga cycle!
 						SM_AMIGA<=IDLE_N;  --go to s1
 					end if;
 				when IDLE_N 	 => --68000:S1 place Adress on bus and wait for rising edge, on a rising CLK_000 look for a amiga adressrobe
@@ -605,7 +615,7 @@ begin
 				AMIGA_BUS_ENABLE_DMA_HIGH 	<= A(1);
 				AMIGA_BUS_ENABLE_DMA_LOW 	<= not A(1);				
 
-			elsif(BGACK_020_INT_D='0' and BGACK_020_INT='1')then			
+			else			
 				RW_000_DMA		<= '1';	
 				SIZE_DMA		<= "00";
 				A0_DMA			<= '0';	
@@ -618,7 +628,7 @@ begin
 				if(CLK_000_NE='1' and CYCLE_DMA<"11")then
 					CYCLE_DMA <= CYCLE_DMA+1;
 				end if;
-				if(TK_CYCLE ='0') then  --presume that all expansion devices can provide a buscycle in 320ns!
+				if(TK_CYCLE ='0' or IDE_SPACE = '1') then  --presume that all expansion devices can provide a buscycle in 320ns!
 					DTACK_DMA <= '0';
 				end if;
 			else
@@ -628,33 +638,22 @@ begin
 										
 			--as can only be done if we know the uds/lds!
 			if(	CYCLE_DMA >"00"
-			  --and AS_000 = '0'
+			   and AS_000 = '0'
 				and AMIGA_DS ='0'
 				and (					
 					CYCLE_DMA < "11"				
 					or RW_000 = '1')
 				)then 
 				--set AS_000
-				if( CLK_GEN="01" ) then --sampled on rising edges, so we can set AS only if the next clock is not rising!!					
+				if( CLK_GEN="00") then --sampled on rising edges, so we can set AS only if the next clock is not rising!!					
 					AS_000_DMA 	<= '0'; 
-					if(RW_000='1') then
-					  DS_000_DMA	<='0';
-					end if;
-				end if;
-
-				if( CLK_GEN="01" and CLK_020_PE <"11" and AS_000_DMA = '0') then --sample rising edges
-					CLK_020_PE <= CLK_020_PE+1;
-				end if;
-				
-				if(RW_000='0' and CLK_020_PE="01" and CLK_GEN(1)='1')then
-					DS_000_DMA	<= '0'; -- write: one clock delayed!
-				end if;					
+					DS_000_DMA	<='0';
+				end if;				
 				
 			else
-				CLK_020_PE <= "00";
 				AS_000_DMA		<= '1';
 				DS_000_DMA		<= '1';
-			end if;		
+			end if;			
 
 						
 	
@@ -704,7 +703,7 @@ begin
 			--IDE address decode section 
 			if(A(23 downto 16) = (IDE_BASEADR) AND SHUT_UP_IDE ='0') then
 				IDE_SPACE <= '1';
-				TK_CYCLE <='0';
+				--TK_CYCLE <='0';
 			else
 				IDE_SPACE <= '0';
 			end if;
@@ -1312,7 +1311,7 @@ begin
 	
 	AMIGA_BUS_DATA_DIR 	 <= RW_000 WHEN (BGACK_020_INT ='1') ELSE --Amiga READ/WRITE
 							--'0' WHEN (RW_000='1' AND BGACK_020_INT ='1') ELSE --Amiga READ
-							'0' WHEN (RW_000='1' AND BGACK_020_INT ='0' AND TK_CYCLE = '0' AND AS_000 = '0') ELSE --DMA READ to expansion space
+							'0' WHEN (RW_000='1' AND BGACK_020_INT ='0' AND (TK_CYCLE = '0' or IDE_SPACE ='1') AND AS_000 = '0') ELSE --DMA READ to expansion space
 							--'0' WHEN (RW_000='0' AND BGACK_020_INT ='0' AND AS_000 = '0') ELSE --DMA WRITE to expansion space
 							'1'; --Point towarts TK
 	--ide stuff
@@ -1352,7 +1351,7 @@ begin
 	RW_020		<= 	'Z' when BGACK_020_INT ='1' --tristate on CPU cycle
 						else RW_000_DMA; --drive on DMA-Cycle
 	
-	BR_020	<= BGACK_020_INT;	
+	BR_020	<= BR_020_EC_INT;	
 
 	--e and VMA		
 	E		<= '1' when 
@@ -1369,17 +1368,17 @@ begin
 	AVEC 	<=	'1';
 		
 	--as and uds/lds
-	AS_000	<=  'Z' when BGACK_020_INT ='0' or RESET_INT ='0' else
+	AS_000	<=  'Z' when BGACK_020_INT ='0' else
 							'0' when AS_000_INT ='0' and AS_020 ='0' else 
 			   			'1';
-	RW_000	<=  'Z' when BGACK_020_INT ='0' or RESET_INT ='0' --tristate on DMA-cycle
+	RW_000	<=  'Z' when BGACK_020_INT ='0'  --tristate on DMA-cycle
 							else RW_000_INT; -- drive on CPU cycle
 
-	UDS_000	<=  'Z' when BGACK_020_INT ='0' or RESET_INT ='0' else --tristate on DMA cycle
+	UDS_000	<=  'Z' when BGACK_020_INT ='0' else --tristate on DMA cycle
 			    		--'1' when DS_000_ENABLE ='0' else 
 							UDS_000_INT when DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet
-	LDS_000	<= 	'Z' when BGACK_020_INT ='0' or RESET_INT ='0' else --tristate on DMA cycle
+	LDS_000	<= 	'Z' when BGACK_020_INT ='0' else --tristate on DMA cycle
 			   			--'1' when DS_000_ENABLE ='0' else 
 							LDS_000_INT when  DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet
@@ -1391,7 +1390,7 @@ begin
 							"11";
 
 	--if no copro is installed:
-	BERR		<=	'0' when AS_020 ='0' and FC="11" and A(19 downto 16)="0010" AND BGACK_000='1'
+	BERR		<=	'0' when AS_020 ='0' and FC="11" and A(19 downto 16)="0010" --AND BGACK_000='1'
 					else 'Z';
 	
 	RESET <= '0' when RESET_INT ='0' else 'Z';

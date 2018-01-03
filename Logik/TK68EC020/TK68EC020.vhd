@@ -128,12 +128,13 @@ constant MEM_START : STD_LOGIC_VECTOR(1 downto 0) :="10";
 	--should be 60ns minus one cycle, because the refresh command counts too 150mhz= 6,66ns *9 =60ns
 	--puls one cycle for safety :(
 
-constant RQ_TIMEOUT : integer := 255;
-	--8192 refreshes in 64ms ->8192 refreshes in 3200000 50MHz ticks
-	-- -> Refresh after 390 tics -> 255 is a safe place to be!
+constant RQ_TIMEOUT : integer := 180;
+	--8192 refreshes in 64ms =128khz refresh rate
+	-- -> Refresh after 219.75 28mhz cycles -> 180 is a safe place to be!
 
-constant DS_SAMPLE : integer := 4;
+constant DS_SAMPLE : integer := 3;
 constant AS_SAMPLE : integer := 4;
+constant CLK_000_DELAY : integer := MAX(DS_SAMPLE,AS_SAMPLE);
 
 	TYPE sdram_state_machine_type IS (
 				powerup, 					
@@ -182,7 +183,6 @@ TYPE SM_68000 IS (
 signal	cpu_est : SM_E;
 signal	SM_AMIGA : SM_68000;
 signal	AS_000_INT:STD_LOGIC;
-signal	AS_000_D0:STD_LOGIC;
 signal	RW_000_INT:STD_LOGIC;
 signal	AMIGA_BUS_ENABLE_DMA_HIGH:STD_LOGIC;
 signal	AMIGA_BUS_ENABLE_DMA_LOW:STD_LOGIC;
@@ -199,24 +199,19 @@ signal	RW_000_DMA:STD_LOGIC;
 signal	CYCLE_DMA: STD_LOGIC_VECTOR ( 1 downto 0 );
 signal	SIZE_DMA: STD_LOGIC_VECTOR ( 1 downto 0 );
 signal	IPL_D0: STD_LOGIC_VECTOR ( 2 downto 0 );
+signal	IPL_D1: STD_LOGIC_VECTOR ( 2 downto 0 );
 signal	A0_DMA: STD_LOGIC;
 signal	VMA_INT: STD_LOGIC;
-signal	VPA_D: STD_LOGIC;
 signal	UDS_000_INT: STD_LOGIC;
 signal	LDS_000_INT: STD_LOGIC;
 signal	DS_000_ENABLE: STD_LOGIC;
-signal	CLK_020_H: STD_LOGIC;
-signal	CLK_000_D: STD_LOGIC_VECTOR ( MAX(DS_SAMPLE,AS_SAMPLE) downto 0 );
+signal	CLK_000_D: STD_LOGIC_VECTOR ( CLK_000_DELAY downto 0 );
 signal	CLK_000_PE: STD_LOGIC;
 signal	CLK_000_NE: STD_LOGIC;
 signal	DTACK_D0: STD_LOGIC;
-signal	CLK_020_D0: STD_LOGIC;
 signal	CLK_GEN: STD_LOGIC_VECTOR ( 1 downto 0 ):="00";
-signal	RESET_DLY: STD_LOGIC_VECTOR ( 3 downto 0 ):=x"0";
-signal	RESET_INT: STD_LOGIC :='0';
 signal	RESET_D0: STD_LOGIC :='0';
 signal	RESET_D1: STD_LOGIC :='0';
-signal	CLK_020_PE: STD_LOGIC_VECTOR ( 1 downto 0 );
 signal	AMIGA_DS: STD_LOGIC;
 signal	DTACK_DMA: STD_LOGIC;
 signal	TK_CYCLE: STD_LOGIC;
@@ -257,6 +252,7 @@ signal 	MEM_SPACE_ENABLE :  STD_LOGIC_VECTOR (2 downto 0);
 signal 	ROM_OVERLAY_ENABLE :  STD_LOGIC:='0';
 signal 	MEM_CGF_SET :  STD_LOGIC:='0';
 signal 	E_DTACK :  STD_LOGIC:='1';
+signal 	FPU_NOT_THERE :  STD_LOGIC:='0';
 begin
 
 	CLK_000_PE <= CLK_000_D(0) AND NOT CLK_000_D(1);
@@ -281,7 +277,7 @@ begin
 			 
 			--delayed Clocks and signals for edge detection
 			CLK_000_D(0) 	<= CLK_000;
-			CLK_000_D(DS_SAMPLE downto 1) 	<= CLK_000_D((DS_SAMPLE-1) downto 0);
+			CLK_000_D(CLK_000_DELAY downto 1) 	<= CLK_000_D((CLK_000_DELAY-1) downto 0);
 			
 			--edge detection
 			RESET_D0 <= RESET;
@@ -289,7 +285,7 @@ begin
 			
 			-- e-clock is changed on the FALLING edge!
 
-			if(CLK_000_PE = '1' ) then
+			if(CLK_000_NE = '1' ) then
 				case (cpu_est) is
 					when E1 	=>	cpu_est <= E2 ; 									
 					when E2 	=> cpu_est <= E3 ;
@@ -311,7 +307,7 @@ begin
 			end if;
 			
 			
-			if(cpu_est = E10 and VMA_INT = '0' and AS_000 ='0') then
+			if(cpu_est = E9 and VMA_INT = '0' and AS_000 ='0') then
 				E_DTACK <='0'; --generate a DTACK at the right time
 			elsif(AS_000 ='1')then
 				E_DTACK <='1';
@@ -357,6 +353,7 @@ begin
 			DSACK_16BIT		<= '0';
 			DSACK_32BIT		<= '0';
 			IPL_D0			<= "111";
+			IPL_D1			<= "111";
 			IPL_020			<= "111";
 			AS_000_DMA		<= '1';
 			DS_000_DMA		<= '1';
@@ -368,9 +365,7 @@ begin
 			AS_020_D1		<= '1';
 			TK_CYCLE			<= '1';
 			CYCLE_DMA		<= "00";
-			AS_000_D0 <='1';
 			AMIGA_DS <='1';
-			CLK_020_PE <= "00";
 			-- reset active ...
 			AUTO_CONFIG_PAUSE <= '0';
 			AUTO_CONFIG_DONE_CYCLE	<= "000";
@@ -407,7 +402,7 @@ begin
 			CQ	<= powerup;
 			INIT_COMPLETE <='0';
 			NQ  <= x"0";
-			RQ<=	x"00";
+			RQ<=	(others => '0');
 			REFRESH <= '0';
 			MEM_DELAY <='0';
 			RAM_CYCLE_START <='0';
@@ -418,6 +413,7 @@ begin
 			AUTO_CONFIG <= '0';
 			MEM_SPACE_ENABLE <= (others => '0');	
 			MEM_CGF_SET <='0';
+			FPU_NOT_THERE <='0';
 		elsif(rising_edge(CLK_PLL)) then
 
 			--the statemachine
@@ -426,6 +422,11 @@ begin
 			AS_020_D0 <= AS_020;
 			AS_020_D1 <= AS_020_D0;
 			DTACK_D0	<= DTACK;
+			if( AS_020_D0 ='0' and FC="11" and A(19 downto 16)="0010")then
+				FPU_NOT_THERE <='1';
+			else
+				FPU_NOT_THERE <='0';
+			end if;
 
 
 			--bgack is simple: assert as soon as Amiga asserts but hold bg_ack for one amiga-clock 
@@ -462,7 +463,8 @@ begin
 		
 			--interrupt buffering to avoid ghost interrupts
 			IPL_D0<=IPL_000;			
-			if(IPL_000 = IPL_D0) then --and CLK_000_PE = '1')then
+			IPL_D1<=IPL_D0;
+			if(IPL_D0=IPL_000) then
 				IPL_020<=IPL_D0;
 			end if;
 		
@@ -507,7 +509,7 @@ begin
 			case (SM_AMIGA) is
 				when IDLE_P 	 => --68000:S0 wait for a falling edge
 					RW_000_INT		<= '1';		
-					if( CLK_000_D(AS_SAMPLE-1)='0' and CLK_000_D(AS_SAMPLE)= '1' and AS_020_000_SYNC = '0' and TK_CYCLE ='1' and IDE_SPACE = '0')then -- if this a delayed expansion space detection, do not start an amiga cycle!
+					if( CLK_000_D(AS_SAMPLE-1)='0' and CLK_000_D(AS_SAMPLE)= '1' and AS_020_000_SYNC = '0')then -- if this a delayed expansion space detection, do not start an amiga cycle!
 						SM_AMIGA<=IDLE_N;  --go to s1
 					end if;
 				when IDLE_N 	 => --68000:S1 place Adress on bus and wait for rising edge, on a rising CLK_000 look for a amiga adressrobe
@@ -571,14 +573,13 @@ begin
 			end case;
 
 			--dma stuff
-			AS_000_D0 <=AS_000;
 			if(UDS_000='0' or LDS_000='0') then
 				AMIGA_DS <='0';
 			else 
 				AMIGA_DS <='1';
 			end if; 
 			
-			if(BGACK_000='0' and AS_000 ='0')then
+			if(BGACK_020_INT='0' and AS_000 ='0')then
 				DMA_CYCLE_STARTED <='1';
 			elsif (AS_000 ='1')then
 				DMA_CYCLE_STARTED <='0';
@@ -803,8 +804,8 @@ begin
 			--refresh counter
 			if CQ = init_refresh or 
 				CQ = refresh_start then
-				RQ<=	x"00";
-			elsif(CLK_GEN(0) ='1' and REFRESH ='0') then --count on edges
+				RQ<=	(others => '0');
+			elsif(CLK_GEN ="01" and REFRESH ='0') then --count on edges
 				RQ <= RQ + 1;
 			end if;
 			
@@ -849,7 +850,7 @@ begin
 				 RAS <= '0';
 				 CAS <= '1';
 				 MEM_WE <= '0';
-				 --ARAM <= ARAM_PRECHARGE;
+				 ARAM <= ARAM_PRECHARGE;
 				 CQ <= init_precharge_commit;
 				
 				when init_precharge_commit =>
@@ -869,7 +870,7 @@ begin
 				 RAS <= '0';
 				 CAS <= '0';
 				 MEM_WE <= '0';
-				 --ARAM <= ARAM_OPTCODE;			
+				 ARAM <= ARAM_OPTCODE;			
 				 CQ <= init_opcode_wait;
 
 				when init_opcode_wait =>
@@ -877,6 +878,7 @@ begin
 				 RAS <= '1';
 				 CAS <= '1';
 				 MEM_WE <= '1';
+				 ARAM <= '0' & A(21 downto 10);
 				 if (NQ >= x"1") then
 					 CQ <= init_refresh;   --1st refresh
 				 else
@@ -888,6 +890,7 @@ begin
 				 RAS <= '0';
 				 CAS <= '0';
 				 MEM_WE <= '1';
+				 ARAM <= '0' & A(21 downto 10);
 				 CQ <= init_wait;
 
 				when init_wait =>
@@ -895,6 +898,7 @@ begin
 				 RAS <= '1';
 				 CAS <= '1';
 				 MEM_WE <= '1';
+				 ARAM <= '0' & A(21 downto 10);
 				 if (	NQ >= NQ_TIMEOUT) then    --wait 60ns here
 					CQ <= refresh_start; --last refresh completes initialzation
 				 else
@@ -926,6 +930,7 @@ begin
 				 RAS <= '0';
 				 CAS <= '0';
 				 MEM_WE <= '1';
+				 ARAM <= '0' & A(21 downto 10);
 				 CQ <= refresh_wait;
 
 				when refresh_wait =>
@@ -945,6 +950,7 @@ begin
 				 RAS <= '0';
 				 CAS <= '1';
 				 MEM_WE <= '1';
+				 ARAM <= '0' & A(21 downto 10);
 				 CQ <= commit_ras;
 
 			  when commit_ras =>
@@ -963,6 +969,7 @@ begin
 				 RAS <= '1';
 				 CAS <= '0';
 				 MEM_WE <= RW_020;
+				 ARAM <= "00000" & A(9 downto 2);
 				 CQ <= commit_cas;
 
 				when commit_cas =>
@@ -971,6 +978,7 @@ begin
 				 CAS <= '1';
 				 MEM_WE <= '1';
 				 --CQ <= commit_cas2; --cl3
+				 ARAM <= "00000" & A(9 downto 2);
 				 CQ <= data_wait; --cl2
 
 				when commit_cas2 =>
@@ -978,6 +986,7 @@ begin
 				 RAS <= '1';
 				 CAS <= '1';
 				 MEM_WE <= '1';
+				 ARAM <= "00000" & A(9 downto 2);
 				 CQ <= data_wait;
 
 				when data_wait => 
@@ -993,7 +1002,7 @@ begin
 				 RAS <= '0';
 				 CAS <= '1';
 				 MEM_WE <= '0';
-				 --ARAM <= ARAM_PRECHARGE;
+				 ARAM <= ARAM_PRECHARGE;
 				 CQ <= precharge_wait;
 
 				when precharge_wait =>
@@ -1001,7 +1010,7 @@ begin
 				 RAS <= '1';
 				 CAS <= '1';
 				 MEM_WE <= '1';
-				 --ARAM <= A(17 downto 5);
+				 ARAM <= '0' & A(21 downto 10);
 				 CQ <= start_state; 
 				 
 			end case;
@@ -1297,15 +1306,15 @@ begin
 
 	-- bus drivers
 	AMIGA_BUS_ENABLE_HIGH <= '0' WHEN BGACK_020_INT ='1' and AS_020_000_SYNC='0' and AS_020 = '0' else --not (SM_AMIGA = IDLE_P or (SM_AMIGA = END_CYCLE_N and CLK_000 = '1')) ELSE 
-							 '0' WHEN (BGACK_000='0' or DMA_CYCLE_STARTED = '1') AND AMIGA_BUS_ENABLE_DMA_HIGH = '0' ELSE
+							 '0' WHEN (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1') AND AMIGA_BUS_ENABLE_DMA_HIGH = '0' ELSE
 							 '1';
-	AMIGA_BUS_ENABLE_LOW <=  '0' WHEN (BGACK_000='0' or DMA_CYCLE_STARTED = '1') AND AMIGA_BUS_ENABLE_DMA_LOW = '0'   ELSE
+	AMIGA_BUS_ENABLE_LOW <=  '0' WHEN (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1') AND AMIGA_BUS_ENABLE_DMA_LOW = '0'   ELSE
 							 '1';  
 	
 	
-	AMIGA_BUS_DATA_DIR 	 <= RW_000 WHEN (BGACK_020_INT ='1') ELSE --Amiga READ/WRITE
+	AMIGA_BUS_DATA_DIR 	 <= RW_020 WHEN (BGACK_020_INT ='1') ELSE --Amiga READ/WRITE
 							--'0' WHEN (RW_000='1' AND BGACK_020_INT ='1') ELSE --Amiga READ
-							'0' WHEN (RW_000='1' AND (BGACK_000='0' or DMA_CYCLE_STARTED = '1') AND (TK_CYCLE = '0' or IDE_SPACE ='1') AND AS_000 = '0') ELSE --DMA READ to expansion space
+							'0' WHEN (RW_000='1' AND (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1') AND (TK_CYCLE = '0' or IDE_SPACE ='1') AND AS_000 = '0') ELSE --DMA READ to expansion space
 							--'0' WHEN (RW_000='0' AND BGACK_020_INT ='0' AND AS_000 = '0') ELSE --DMA WRITE to expansion space
 							'1'; --Point towarts TK
 	--ide stuff
@@ -1337,12 +1346,12 @@ begin
 	DS_020	<= 	'Z' when BGACK_020_INT ='1' else
 				'0' when DS_000_DMA ='0' and AS_000 ='0' else 
 			   	'1';
-	A_0		<= 	A0_DMA when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') --drive on DMA-Cycle
+	A_0		<= 	A0_DMA when (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1') --drive on DMA-Cycle
 							else	'Z'; --tristate on CPU-Cycle
-	SIZE	<= 	SIZE_DMA when (BGACK_000='0' or DMA_CYCLE_STARTED = '1')
+	SIZE	<= 	SIZE_DMA when (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1')
 						else "ZZ"; --tristate on CPU-Cycle
 	--rw
-	RW_020		<= 	RW_000_DMA when (BGACK_000='0' or DMA_CYCLE_STARTED = '1')  --drive on DMA-Cycle
+	RW_020		<= 	RW_000_DMA when (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1')  --drive on DMA-Cycle
 						else	'Z'; --tristate on CPU-Cycle
 	
 	BR_020	<= BR_020_EC_INT;	
@@ -1362,17 +1371,17 @@ begin
 	AVEC 	<=	'1';
 		
 	--as and uds/lds
-	AS_000	<=  'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') else
+	AS_000	<=  'Z' when (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1') else
 							'0' when AS_000_INT ='0' and AS_020 ='0' else 
 			   			'1';
-	RW_000	<=  'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1')  --tristate on DMA-cycle
+	RW_000	<=  'Z' when (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1')  --tristate on DMA-cycle
 							else RW_000_INT; -- drive on CPU cycle
 
-	UDS_000	<=  'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') else --tristate on DMA cycle
+	UDS_000	<=  'Z' when (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1') else --tristate on DMA cycle
 			    		--'1' when DS_000_ENABLE ='0' else 
 							UDS_000_INT when DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet
-	LDS_000	<= 	'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') else --tristate on DMA cycle
+	LDS_000	<= 	'Z' when (BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1') else --tristate on DMA cycle
 			   			--'1' when DS_000_ENABLE ='0' else 
 							LDS_000_INT when  DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet
@@ -1384,7 +1393,7 @@ begin
 							"11";
 
 	--if no copro is installed:
-	BERR		<=	'0' when AS_020 ='0' and FC="11" and A(19 downto 16)="0010" --AND BGACK_000='1'
+	BERR		<=	'0' when FPU_NOT_THERE ='1' --AND BGACK_020_INT='1'
 					else 'Z';
 	
 	RESET <= 'Z'; -- no active reset (yet)

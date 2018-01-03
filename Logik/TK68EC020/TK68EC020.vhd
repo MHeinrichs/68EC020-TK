@@ -191,6 +191,7 @@ signal	AS_020_D1:STD_LOGIC;
 signal	AS_020_000_SYNC:STD_LOGIC;
 signal	BR_020_EC_INT:STD_LOGIC;
 signal	BGACK_020_INT:STD_LOGIC;
+signal	DMA_CYCLE_STARTED:STD_LOGIC;
 signal	BGACK_020_INT_D:STD_LOGIC;
 signal	AS_000_DMA:STD_LOGIC;
 signal	DS_000_DMA:STD_LOGIC;
@@ -340,9 +341,9 @@ begin
 		end if;
 	end process gen_clk;
 
-	neg_clk:process(CLK_PLL,RESET_INT)
+	neg_clk:process(CLK_PLL,RESET_D1)
 	begin
-		if(RESET_INT = '0' ) then
+		if(RESET_D1 = '0' ) then
 			LE_RAM_020<='1';
 		elsif(falling_edge(clk_pll))then
 			LE_RAM_020 <= LE_RAM_020_P;
@@ -351,9 +352,10 @@ begin
 
 --	LE_RAM_020 <= LE_RAM_020_P;
 
-	pos_clk: process(CLK_PLL,RESET_INT)
+	pos_clk: process(CLK_PLL,RESET_D1)
 	begin
-		if(RESET_INT = '0' ) then
+		if(RESET_D1 = '0' ) then
+			DMA_CYCLE_STARTED <='0';
 			DTACK_D0		<= '1';
 			SM_AMIGA		<= IDLE_P;
 			AS_000_INT 		<= '1';
@@ -459,6 +461,7 @@ begin
 				--BGACK_020_INT_PRE<= '1';
 				BGACK_020_INT 	<= '1'; --hold this signal high until 7m clock goes low
 				BGACK_020_INT <='1';
+				BR_020_EC_INT <='1';
 			end if;
 			BGACK_020_INT_D <= BGACK_020_INT;
 
@@ -466,7 +469,7 @@ begin
 			if(BG_020= '1')then
 				BG_000	<= '1';
 			elsif(	BG_020= '0' --AND (SM_AMIGA 	= IDLE_P)
-					and TK_CYCLE = '1' and IDE_SPACE ='0' and AS_020_D0='1'
+					and AS_020 = '1' and AS_020_D0='1'
 					and CLK_000_D(0)='1' 
 					) then --bus granted no local access and no AS_020 running!
 					BG_000 	<= '0';
@@ -591,7 +594,13 @@ begin
 				AMIGA_DS <='1';
 			end if; 
 			
-			if(BGACK_020_INT='0')then			
+			if(BGACK_000='0' and AS_000 ='0')then
+				DMA_CYCLE_STARTED <='1';
+			elsif (AS_000 ='1')then
+				DMA_CYCLE_STARTED <='0';
+			end if;
+			
+			if(BGACK_020_INT='0' or DMA_CYCLE_STARTED = '1')then			
 				--set some signals NOT linked to AS_000='0'
 				RW_000_DMA	<= RW_000;
 				-- now determine the size: if both uds and lds is set its 16 bit else 8 bit!
@@ -623,7 +632,8 @@ begin
 				AMIGA_BUS_ENABLE_DMA_LOW 	<= '1';				
 			end if;
 					
-			if(BGACK_020_INT='0' and AS_000='0')then 
+			
+			if(DMA_CYCLE_STARTED='1')then 
 				-- an 68000-memory cycle is three negative edges long!
 				if(CLK_000_NE='1' and CYCLE_DMA<"11")then
 					CYCLE_DMA <= CYCLE_DMA+1;
@@ -1303,15 +1313,15 @@ begin
 
 	-- bus drivers
 	AMIGA_BUS_ENABLE_HIGH <= '0' WHEN BGACK_020_INT ='1' and AS_020_000_SYNC='0' and AS_020 = '0' else --not (SM_AMIGA = IDLE_P or (SM_AMIGA = END_CYCLE_N and CLK_000 = '1')) ELSE 
-							 '0' WHEN BGACK_020_INT ='0' AND AMIGA_BUS_ENABLE_DMA_HIGH = '0' ELSE
+							 '0' WHEN (BGACK_000='0' or DMA_CYCLE_STARTED = '1') AND AMIGA_BUS_ENABLE_DMA_HIGH = '0' ELSE
 							 '1';
-	AMIGA_BUS_ENABLE_LOW <=  '0' WHEN BGACK_020_INT ='0' AND AMIGA_BUS_ENABLE_DMA_LOW = '0'   ELSE
+	AMIGA_BUS_ENABLE_LOW <=  '0' WHEN (BGACK_000='0' or DMA_CYCLE_STARTED = '1') AND AMIGA_BUS_ENABLE_DMA_LOW = '0'   ELSE
 							 '1';  
 	
 	
 	AMIGA_BUS_DATA_DIR 	 <= RW_000 WHEN (BGACK_020_INT ='1') ELSE --Amiga READ/WRITE
 							--'0' WHEN (RW_000='1' AND BGACK_020_INT ='1') ELSE --Amiga READ
-							'0' WHEN (RW_000='1' AND BGACK_020_INT ='0' AND (TK_CYCLE = '0' or IDE_SPACE ='1') AND AS_000 = '0') ELSE --DMA READ to expansion space
+							'0' WHEN (RW_000='1' AND (BGACK_000='0' or DMA_CYCLE_STARTED = '1') AND (TK_CYCLE = '0' or IDE_SPACE ='1') AND AS_000 = '0') ELSE --DMA READ to expansion space
 							--'0' WHEN (RW_000='0' AND BGACK_020_INT ='0' AND AS_000 = '0') ELSE --DMA WRITE to expansion space
 							'1'; --Point towarts TK
 	--ide stuff
@@ -1343,13 +1353,13 @@ begin
 	DS_020	<= 	'Z' when BGACK_020_INT ='1' else
 				'0' when DS_000_DMA ='0' and AS_000 ='0' else 
 			   	'1';
-	A_0		<= 	'Z' when BGACK_020_INT ='1' --tristate on CPU-Cycle
-							else	A0_DMA; --drive on DMA-Cycle
-	SIZE	<= 	"ZZ" when BGACK_020_INT ='1' else
-						SIZE_DMA;
+	A_0		<= 	A0_DMA when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') --drive on DMA-Cycle
+							else	'Z'; --tristate on CPU-Cycle
+	SIZE	<= 	SIZE_DMA when (BGACK_000='0' or DMA_CYCLE_STARTED = '1')
+						else "ZZ"; --tristate on CPU-Cycle
 	--rw
-	RW_020		<= 	'Z' when BGACK_020_INT ='1' --tristate on CPU cycle
-						else RW_000_DMA; --drive on DMA-Cycle
+	RW_020		<= 	RW_000_DMA when (BGACK_000='0' or DMA_CYCLE_STARTED = '1')  --drive on DMA-Cycle
+						else	'Z'; --tristate on CPU-Cycle
 	
 	BR_020	<= BR_020_EC_INT;	
 
@@ -1368,17 +1378,17 @@ begin
 	AVEC 	<=	'1';
 		
 	--as and uds/lds
-	AS_000	<=  'Z' when BGACK_020_INT ='0' else
+	AS_000	<=  'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') else
 							'0' when AS_000_INT ='0' and AS_020 ='0' else 
 			   			'1';
-	RW_000	<=  'Z' when BGACK_020_INT ='0'  --tristate on DMA-cycle
+	RW_000	<=  'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1')  --tristate on DMA-cycle
 							else RW_000_INT; -- drive on CPU cycle
 
-	UDS_000	<=  'Z' when BGACK_020_INT ='0' else --tristate on DMA cycle
+	UDS_000	<=  'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') else --tristate on DMA cycle
 			    		--'1' when DS_000_ENABLE ='0' else 
 							UDS_000_INT when DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet
-	LDS_000	<= 	'Z' when BGACK_020_INT ='0' else --tristate on DMA cycle
+	LDS_000	<= 	'Z' when (BGACK_000='0' or DMA_CYCLE_STARTED = '1') else --tristate on DMA cycle
 			   			--'1' when DS_000_ENABLE ='0' else 
 							LDS_000_INT when  DS_000_ENABLE ='1' -- output on cpu cycle
 							else '1'; -- datastrobe not ready jet
@@ -1393,7 +1403,7 @@ begin
 	BERR		<=	'0' when AS_020 ='0' and FC="11" and A(19 downto 16)="0010" --AND BGACK_000='1'
 					else 'Z';
 	
-	RESET <= '0' when RESET_INT ='0' else 'Z';
+	--RESET <= '0' when RESET_INT ='0' else 'Z';
 	
 end Behavioral;
 

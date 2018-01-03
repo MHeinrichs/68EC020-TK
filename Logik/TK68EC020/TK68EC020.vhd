@@ -318,26 +318,11 @@ begin
 			end if;
 			
 			
-			
-			
-			if(RESET_D0 = '0' and RESET_D1 ='1') then
-				RESET_DLY <= x"0";
-			elsif(CLK_GEN="11")then
-				RESET_DLY <= RESET_DLY+1;
-			end if;
-
-			if(RESET_D0 = '0' and RESET_D1 ='1') then
-				RESET_INT <= '0';
-			elsif(RESET_DLY = x"F")then
-				RESET_INT <= '1';
-			end if;
-
-			
-			--rom overlay enable section
-			
+			--rom overlay enable section			
 			if(A(23 downto 19) = (x"E"&'0') and AS_020_D0 = '0' and AS_020_D1 ='1' and RW_020='0' )then --enable on write on the last word
 				ROM_OVERLAY_ENABLE <='1';
 			end if;
+			
 		end if;
 	end process gen_clk;
 
@@ -459,9 +444,8 @@ begin
 					AND AS_000 = '1' --the amiga AS can be still active while bgack is deasserted, so wait for this signal too!
 					) then -- BGACK_000 is high here!
 				--BGACK_020_INT_PRE<= '1';
-				BGACK_020_INT 	<= '1'; --hold this signal high until 7m clock goes low
-				BGACK_020_INT <='1';
-				BR_020_EC_INT <='1';
+				BGACK_020_INT <= '1'; --hold this signal high until 7m clock goes low
+				BR_020_EC_INT <= '1';
 			end if;
 			BGACK_020_INT_D <= BGACK_020_INT;
 
@@ -1403,7 +1387,7 @@ begin
 	BERR		<=	'0' when AS_020 ='0' and FC="11" and A(19 downto 16)="0010" --AND BGACK_000='1'
 					else 'Z';
 	
-	--RESET <= '0' when RESET_INT ='0' else 'Z';
+	RESET <= 'Z'; -- no active reset (yet)
 	
 end Behavioral;
 

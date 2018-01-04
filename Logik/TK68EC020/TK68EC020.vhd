@@ -120,7 +120,7 @@ constant CLOCK_SAMPLE : integer := 2; --cl3
 --constant CLOCK_SAMPLE : integer := 3; --cl2
 constant NQ_TIMEOUT : integer := 5; --cl3
 --constant NQ_TIMEOUT : integer := 6; --cl2
-constant IDE_WAITS : integer := 0;
+constant IDE_WAITS : integer := 1;
 constant ROM_WAITS : integer := 5;
 constant IDE_DELAY : integer := MAX(IDE_WAITS,ROM_WAITS);
 constant MEM_START : STD_LOGIC_VECTOR(1 downto 0) :="10";
@@ -132,7 +132,7 @@ constant RQ_TIMEOUT : integer := 180;
 	--8192 refreshes in 64ms =128khz refresh rate
 	-- -> Refresh after 219.75 28mhz cycles -> 180 is a safe place to be!
 
-constant DS_SAMPLE : integer := 3;
+constant DS_SAMPLE : integer := 2;
 constant AS_SAMPLE : integer := 4;
 constant CLK_000_DELAY : integer := MAX(DS_SAMPLE,AS_SAMPLE);
 
@@ -182,6 +182,17 @@ TYPE SM_68000 IS (
 				);				
 signal	cpu_est : SM_E;
 signal	SM_AMIGA : SM_68000;
+signal 	CQ :  sdram_state_machine_type;
+
+attribute fsm_encoding : string;
+attribute fsm_safe_state : string;
+attribute fsm_encoding of SM_E : TYPE IS "sequential";
+attribute fsm_safe_state of SM_E : TYPE is "E1";
+attribute fsm_encoding of SM_68000 : TYPE is "sequential";
+attribute fsm_safe_state of SM_68000 : TYPE is "IDLE_P";
+attribute fsm_encoding of sdram_state_machine_type : TYPE is "compact";
+attribute fsm_safe_state of sdram_state_machine_type : TYPE is "powerup";
+
 signal	AS_000_INT:STD_LOGIC;
 signal	RW_000_INT:STD_LOGIC;
 signal	AMIGA_BUS_ENABLE_DMA_HIGH:STD_LOGIC;
@@ -239,7 +250,6 @@ signal	AUTO_CONFIG_FINISH:STD_LOGIC;
 signal 	REFRESH: std_logic;
 signal 	NQ :  STD_LOGIC_VECTOR (3 downto 0);
 signal 	RQ :  STD_LOGIC_VECTOR (7 downto 0);
-signal 	CQ :  sdram_state_machine_type;
 constant ARAM_PRECHARGE: STD_LOGIC_VECTOR (12 downto 0) := "0010000000000";   
 --constant ARAM_OPTCODE: STD_LOGIC_VECTOR (12 downto 0) := "0001000110000"; --cl3   
 constant ARAM_OPTCODE: STD_LOGIC_VECTOR (12 downto 0) := "0001000100000"; --cl2																			  

@@ -204,6 +204,8 @@ signal	BR_020_EC_INT:STD_LOGIC;
 signal	BGACK_020_INT:STD_LOGIC;
 signal	DMA_CYCLE_STARTED:STD_LOGIC;
 signal	BGACK_020_INT_D:STD_LOGIC;
+signal	BGACK_020_INT_PRE:STD_LOGIC	:= '1';
+signal	BGACK_020_INT_SAMPLED:STD_LOGIC	:= '1';
 signal	AS_000_DMA:STD_LOGIC;
 signal	DS_000_DMA:STD_LOGIC;
 signal	RW_000_DMA:STD_LOGIC;
@@ -360,6 +362,8 @@ begin
 			BR_020_EC_INT	<= '1';
 			BGACK_020_INT_D <= '1';
 			BGACK_020_INT <= '1';
+			BGACK_020_INT_PRE<= '1';
+			BGACK_020_INT_SAMPLED<= '1';
 			DSACK_16BIT		<= '0';
 			DSACK_32BIT		<= '0';
 			IPL_D0			<= "111";
@@ -442,22 +446,32 @@ begin
 			--bgack is simple: assert as soon as Amiga asserts but hold bg_ack for one amiga-clock 
 			if(BGACK_000='0' or BR_000 ='0') then
 				BR_020_EC_INT	<= '0';
-				--BGACK_020_INT_PRE<= '0';
+				BGACK_020_INT_SAMPLED	<= '0';
+				BGACK_020_INT_PRE<= '0';
 			end if;
 			
 			if(BGACK_000='0') then
 				BGACK_020_INT	<= '0';
-				--BGACK_020_INT_PRE<= '0';
+			end if;
+			
+			--deassert is complex: 
+			--first sample BGACK_000 on the 7m-neg edge
+			--then hold BGACK_030_INT for two 7m-clocks high edges
+			if (	BGACK_000='1'  and BR_000 ='1'
+					AND CLK_000_NE='1' --sampled on negative edges	
+				) then
+				BGACK_020_INT_SAMPLED 	<= '1'; 
 			end if;
 
-			if (	BGACK_000='1' and BR_000 ='1'
-					AND CLK_000_NE='1'
-					AND AS_000 = '1' --the amiga AS can be still active while bgack is deasserted, so wait for this signal too!
-					) then -- BGACK_000 is high here!
-				--BGACK_020_INT_PRE<= '1';
-				BGACK_020_INT <= '1'; --hold this signal high until 7m clock goes low
-				BR_020_EC_INT <= '1';
+			if (	BGACK_020_INT_SAMPLED='1' --sampled on the negative edge
+					AND CLK_000_PE='1' -- delayed two pos edges long!
+					and AS_000 = '1'--the amiga AS can be still active while bgack is deasserted, so wait for this signal too!
+					)then 						
+				BGACK_020_INT_PRE<= '1';
+				BGACK_020_INT <= BGACK_020_INT_PRE;
+				BR_020_EC_INT <= BGACK_020_INT_PRE;
 			end if;
+			
 			BGACK_020_INT_D <= BGACK_020_INT;
 
 			--bus grant only in idle state
@@ -694,7 +708,7 @@ begin
 				or (A(23 downto 20) = x"C" 		and MEM_SPACE_ENABLE(2)='1')
 				or (A(23 downto 19) = (x"D"&'0') and MEM_SPACE_ENABLE(2)='1')
 				or (A(23 downto 20) = (x"A") 		and MEM_SPACE_ENABLE(2)='1')
-				or (A(23 downto 19) = (x"B"&'0') and MEM_SPACE_ENABLE(2)='1')
+				--or (A(23 downto 19) = (x"B"&'0') and MEM_SPACE_ENABLE(2)='1')  --buggy mem region!
 				) then
 				MEM_SPACE <= '1';
 				TK_CYCLE <='0';

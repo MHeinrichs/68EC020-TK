@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020_TB_isim_beh.exe" -prj "C:/Users/Matze/Amiga/Hardwarehacks/68EC020-TK/Logik/TK68EC020/TK68EC020_TB_beh.prj" "work.TK68EC020_TB" 
